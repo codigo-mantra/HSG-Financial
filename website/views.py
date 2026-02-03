@@ -22,3 +22,8 @@ class ContactUsView(View):
             form = ContactUsForm()
 
         return render(request, self.template_name, {"form": form})
+
+
+class AboutUsView(View):
+    def get(self, request):
+        return render(request, "website/about_us.html")
