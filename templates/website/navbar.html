@@ -3,7 +3,7 @@
  <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="../Pages/Index.html">
+            <a class="navbar-brand d-flex align-items-center" href="{% url 'home_page' %}">
 
                 <div>
                     <img src="{% static '/assest/images/image_2.png' %}" alt="">
@@ -88,26 +88,26 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../Pages/aboutus.html">About Us</a>
+                        <a class="nav-link" href="{% url 'about_us' %}">About Us</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button"
                             data-bs-toggle="dropdown">Calculators</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Loan Calculator</a></li>
-                            <li><a class="dropdown-item" href="#">Borrowing Power</a></li>
+                            <li><a class="dropdown-item" href="{% url 'loan_calculator' %}">Loan Calculator</a></li>
+                            <li><a class="dropdown-item" href="{% url 'loan_calculator' %}">Borrowing Power</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Insights &
+                        <a class="nav-link dropdown-toggle" href="{% url 'blogs_page' %}" role="button" data-bs-toggle="dropdown">Insights &
                             Resources</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="../Pages/blog.html   ">Blog</a></li>
-                            <li><a class="dropdown-item" href="#">Guides</a></li>
+                            <li><a class="dropdown-item" href="{% url 'blogs_page' %}">Blog</a></li>
+                            <li><a class="dropdown-item" href="{% url 'blogs_page' %}">Guides</a></li>
                         </ul>
                     </li>
                     <li class="nav-item ms-lg-3">
-                        <a class="btn btn-primary rounded-pill px-4" href="../Pages/contactus.html">Contact Us</a>
+                        <a class="btn btn-primary rounded-pill px-4" href="{% url 'contact_us' %}">Contact Us</a>
                     </li>
                 </ul>
             </div>

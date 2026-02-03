@@ -1,0 +1,159 @@
+{% extends "./base.html" %}
+{% load static  %}
+
+{% block title %} Blogs | Details {% endblock title %} 
+
+{% block main_content %}
+
+ <!-- Article Hero Section -->
+    <section class="article-hero py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-11 text-center">
+                    <!-- Meta Info -->
+                    <div class="article-meta mb-3 d-flex justify-content-around align-items-center gap-3">
+                        <a href="#" class="article-category">{{blog.category}} </a>
+                        <span class="article-read-time text-muted">{{blog.reading_time}}  mins read</span>
+                    </div>
+
+                    <!-- Title -->
+                    <h1 class="article-title display-5  fw-bold mb-1">{{blog.title}} .</h1>
+
+                    <!-- Author -->
+                    <p class="article-author text-muted mb-4">Written By :{{blog.author.full_name}} </p>
+
+                    <!-- Featured Image -->
+                    <div class="article-featured-image rounded-4 overflow-hidden shadow-sm">
+                        <img style="max-height: 450px; object-fit: cover;" src="{{blog.thumbnail.url}}"
+                            alt="Article featured image" class="img-fluid w-100">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content Section -->
+    <section class="article-content-section pb-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-11">
+                    <article class="article-body">
+                        {{blog.content|safe}}
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Articles Section -->
+    <section class="related-articles-section pb-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <span class="badge bg-primary mb-3 rotate">Related Blogs</span>
+                    <h2 class="display-5 fw-bold other-articles mb-4">Other Articles</h2>
+
+                    <div class="row g-4">
+                        {% for blog in related_blogs %}
+                            <!-- Related Article  -->
+                            <div class="col-md-4">
+                                <article class="blog-card">
+                                    <div class="blog-image-wrapper">
+                                        <img src="{{blog.thumbnail.url}}?w=600&h=400&fit=crop"
+                                            alt="Money" class="blog-image">
+                                    </div>
+                                    <div class="blog-content">
+                                        <div class="blog-meta">
+                                            <a href="{% url 'blog_detail' blog.slug %}" class="blog-category">{{blog.category}} </a>
+                                            <span class="blog-read-time">{{blog.reading_time}} mins read</span>
+                                        </div>
+                                        <h3 class="blog-title">{{blog.title}} </h3>
+                                        <p class="blog-excerpt">{{blog.short_decription}} ...</p>
+                                    </div>
+                                </article>
+                            </div>
+                        {% endfor %}
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Split Section -->
+    <section class="info-split-section py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="bg-dark-blue rounded-4 catch-up-section p-5 text-white h-100 position-relative overflow-hidden"
+                        style="min-height: 300px;">
+                        <div class=" top-0 start-0 m-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="58" height="62" viewBox="0 0 58 62"
+                                fill="none">
+                                <g filter="url(#filter0_d_382_9043)">
+                                    <path
+                                        d="M24.2337 6.875H33.4004C43.5257 6.875 51.7337 15.0831 51.7337 25.2083C51.7337 35.3336 43.5257 43.5417 33.4004 43.5417V51.5625C21.9421 46.9792 5.90039 40.1042 5.90039 25.2083C5.90039 15.0831 14.1085 6.875 24.2337 6.875Z"
+                                        fill="#0336BA" />
+                                </g>
+                                <path d="M36.3184 11.5C40.6517 12.1667 48.8184 16.1 46.8184 26.5" stroke="#CAD875"
+                                    stroke-width="2" stroke-linecap="round" stroke-dasharray="9 9" />
+                                <defs>
+                                    <filter id="filter0_d_382_9043" x="0.00039053" y="4.975" width="57.634"
+                                        height="56.4875" filterUnits="userSpaceOnUse"
+                                        color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                        <feColorMatrix in="SourceAlpha" type="matrix"
+                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                        <feOffset dy="4" />
+                                        <feGaussianBlur stdDeviation="2.95" />
+                                        <feComposite in2="hardAlpha" operator="out" />
+                                        <feColorMatrix type="matrix"
+                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                                        <feBlend mode="normal" in2="BackgroundImageFix"
+                                            result="effect1_dropShadow_382_9043" />
+                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_382_9043"
+                                            result="shape" />
+                                    </filter>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="position-relative" style="margin-top: 23px;">
+                            <h3 class="fw-bold display-6 catch-up-text">Let's catch up and get started.</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="provide-section-r rounded-4 p-5 text-white h-100" style="min-height: 300px;">
+                        <h4 class="fw-bold mb-4">What we Provide</h4>
+                        <ul class="listening-white-list">
+                            <li class="mb-2 d-flex align-items-start">
+                                <!-- <i class="bi bi-check-circle-fill text-primary me-2 mt-1"></i> -->
+
+                                <span>We provide real choice, looking to find you the right deal</span>
+                            </li>
+                            <li class="mb-2 d-flex align-items-start">
+                                <!-- <i class="bi bi-check-circle-fill text-primary me-2 mt-1"></i> -->
+                                <span>We work with multiple lenders</span>
+                            </li>
+                            <li class="mb-2 d-flex align-items-start">
+                                <!-- <i class="bi bi-check-circle-fill text-primary me-2 mt-1"></i> -->
+                                <span>We may negotiate a better outcome</span>
+                            </li>
+                            <li class="mb-2 d-flex align-items-start">
+                                <!-- <i class="bi bi-check-circle-fill text-primary me-2 mt-1"></i> -->
+                                <span>We help at a time and place that suits you</span>
+                            </li>
+                            <li class="d-flex align-items-start">
+                                <!-- <i class="bi bi-check-circle-fill text-primary me-2 mt-1"></i> -->
+                                <span>We do the legwork for you</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock main_content %}
+

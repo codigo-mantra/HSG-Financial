@@ -131,8 +131,11 @@ body {
 }
 
 .btn-primary:hover {
-    background-color: #0a2d7a;
-    border-color: #0a2d7a;
+    border-radius: 60px;
+    border-bottom: 4px solid #0060FF;
+    border-top: none !important;
+    background: #00163B;
+    box-shadow: 6px 0 3px 0 #0B295B inset !important;
 }
 
 /* Hero Section */
@@ -322,11 +325,21 @@ body {
 .service-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 1.5rem !important;
+
+    .card-body {
+        transition: .6s;
+    }
 }
 
 .service-card:hover {
-    transform: translateY(-5px);
+    transform: rotate(5deg) !important;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1) !important;
+    outline: 1px solid #0336BA;
+
+
+    .card-body {
+        transform: rotate(-5deg);
+    }
 }
 
 .service-card i {
@@ -367,6 +380,7 @@ body {
     border-radius: 30px;
     background: rgba(0, 0, 0, 0.00);
     border-radius: 30px;
+    color: white;
 
 
     strong {
@@ -711,7 +725,7 @@ body {
         linear-gradient(0deg,
             rgba(3, 54, 186, 0.86) 0%,
             rgba(3, 54, 186, 0.86) 100%),
-        url("../images/305a0baa8667bb43715490c9654f6c11d3df9da1.jpg") center / cover no-repeat;
+        url("../images/keywithgirl.jpg") center / cover no-repeat;
 
     z-index: 1;
     /* 👈 bring it up */
@@ -909,7 +923,7 @@ body {
     font-family: "Cabinet Grotesk";
     font-size: 90px;
     font-style: normal;
-    font-weight: 800;
+    font-weight: 800 !important;
     line-height: 140%;
     /* 126px */
 
@@ -970,7 +984,7 @@ body {
 .value-card:hover {
     border-color: #0d3b9c !important;
     box-shadow: 0 5px 15px rgba(13, 59, 156, 0.1);
-    transform: translateY(-5px);
+    transform: rotate(5deg);
 }
 
 /* Team Section */
@@ -1228,6 +1242,64 @@ body {
     .highlight-lime {
         display: inline;
         padding: 5px;
+    }
+
+    .how-we-work.calulator::before {
+        display: none;
+    }
+
+    .select-btn {
+        width: 100%;
+        padding: 10px 9px;
+        border-radius: 10px;
+        border: 1px solid #0A379E;
+        background: #E8ECF7;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #000;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 400;
+        height: 100%;
+        line-height: 160%;
+    }
+
+    .select-btn {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        font-size: 12px !important;
+    }
+
+    .saving-calculator-s {
+        font-size: 12px !important;
+    }
+
+    .blog-btn-red {
+        padding: 10px 10px !important;
+        font-size: 12px !important;
+    }
+
+    .reset-button {
+        padding: 10px 20px !important;
+        font-size: 12px !important;
+    }
+
+    .input-body-e {
+        input::placeholder {
+            padding: 10px 0px !important;
+            font-size: 12px !important;
+        }
+    }
+
+    .search-btn-r {
+        padding: 10px 20px !important;
+        font-size: 12px !important;
     }
 }
 
@@ -2358,7 +2430,19 @@ html {
     font-style: normal;
     font-weight: 400;
     line-height: 140%;
+    transition: .3s;
     /* 16.8px */
+}
+
+.contact-form input:hover {
+    border-radius: 12px;
+    outline: 1px solid rgba(98, 18, 12, 0.10);
+    background: #FFF;
+    box-shadow: 0 4px 6.8px 0 rgba(0, 0, 0, 0.10);
+
+    /* &::placeholder {
+            padding-left: 10px;
+        } */
 }
 
 .contact-form input::placeholder {
@@ -2368,6 +2452,7 @@ html {
     font-style: normal;
     font-weight: 400;
     line-height: 140%;
+    /* transition: .2s; */
 }
 
 .contact-form .form-control {
@@ -2386,6 +2471,14 @@ html {
 
 .contact-form textarea.form-control {
     resize: none;
+    transition: .3s;
+}
+
+.contact-form textarea:hover {
+    border-radius: 12px;
+    outline: 1px solid rgba(98, 18, 12, 0.10);
+    background: #FFF;
+    box-shadow: 0 4px 6.8px 0 rgba(0, 0, 0, 0.10);
 }
 
 .contact-form .btn-primary {
@@ -2453,6 +2546,16 @@ html {
         font-size: 0.9rem;
     }
 
+    .bg-dark-blue.rounded-5.footer-section {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .footer-section .bg-dark-blue {
+        padding-bottom: 10px !important;
+        padding-right: 10px !important;
+        padding-left: 10px !important;
+    }
 }
 
 /* Animation for FAQ toggle */
@@ -2464,9 +2567,9 @@ html {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding-left: 39px !important;
-    padding-right: 39px !important;
-    margin-bottom: 30px !important;
+    padding-left: 39px;
+    padding-right: 39px;
+    margin-bottom: 30px;
 }
 
 .footer-links {
@@ -2728,6 +2831,56 @@ html {
     .main-container {
         padding: 30px;
     }
+
+    .proses-detail-card {
+        transform: translate(0px) !important;
+
+        img {
+            display: none;
+        }
+    }
+
+    .mobile-view {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .faq-header {
+        padding: 10px;
+    }
+
+    .faq-answer {
+        padding: 11px;
+    }
+
+    .blog-tital {
+        font-size: 30px;
+    }
+
+    .buy-homes {
+        min-height: 300px !important;
+
+        img {
+            display: none;
+        }
+    }
+
+    .btn.btn-primary.btn-lg.rounded-pill.px-5.mb-5 {
+        padding: 14px 23px;
+    }
+}
+
+.btn.btn-primary.btn-lg.rounded-pill.px-5.mb-5 {
+    padding: 14px 42px;
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    /* 22.4px */
 }
 
 .more-tool-title {
@@ -2938,10 +3091,18 @@ html {
     font-weight: 500;
     line-height: 140%;
     padding: 10px 30px;
-
+    transition: all 0.5s ease;
     margin-top: 40px;
+    margin-bottom: 10px;
     /* 28px */
 }
+
+.view-all-button:hover {
+    border-radius: 9px;
+    background: radial-gradient(64.33% 64.33% at 50% 50%, #C1D2FF 0%, #0336BA 100%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+}
+
 
 .how-we-work.calulator {
     padding-top: 130px !important;
@@ -3303,4 +3464,61 @@ html {
     margin-top: -50px;
     max-width: 429.258px;
 
+}
+
+.proses-detail-card {
+    display: flex;
+    align-items: start;
+    gap: 20px;
+
+    div {
+        h5 {
+            color: #333;
+            font-family: Poppins;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 160%;
+            margin-bottom: 4px;
+            /* 38.4px */
+        }
+
+        p {
+            color: #333;
+            font-family: Poppins;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%;
+            margin-bottom: 0;
+            /* 25.6px */
+        }
+    }
+}
+
+.proses-detail-card.right-top {
+    transform: translateY(50px);
+
+}
+
+.proses-detail-card.right-center {
+    transform: translateY(110px);
+}
+
+.proses-detail-card.right-bottom {
+    transform: translateY(180px);
+}
+
+.left-top {
+    transform: translateY(220px);
+}
+
+.left-center {
+    transform: translateY(290px);
+}
+
+.footer-section div {
+    flex-wrap: wrap;
+    row-gap: 20px;
+    padding: 10px;
 }

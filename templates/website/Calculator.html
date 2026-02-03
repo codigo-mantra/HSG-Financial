@@ -1,0 +1,463 @@
+{% extends "./base.html" %}
+{% load static  %}
+
+{% block title %} HSG Financial Services - Estimate Your Borrowing Power {% endblock title %} 
+
+{% block main_content %} 
+
+<section class=" bg-lines-design py-5">
+        <!-- <div class="hero-bg-pattern"></div> -->
+        <div class="container position-relative">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-10">
+                    <span class="badge bg-primary mb-3 px-3 rotate py-2">Blogs</span>
+                    <h1 class="display-4 fw-bold blog-tital mb-3">Estimate Your <span style="color: #0A379E;">Borrowing
+                            Power</span> in Seconds</h1>
+                    <p class="lead text-muted blog-para mb-4">From first homes to dream homes, we guide you through the
+                        lending
+                        landscape with expertise and genuine support.</p>
+                    <a href="#articles" class="btn btn-primary btn-lg blog-btn-red rounded-pill px-5">Explore our
+                        calculators</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <img class=" object-fit-cover w-100" src="../assest/images/calculatorhero.png" alt="">
+                </div>
+            </div>
+        </div>
+
+    </section> -->
+
+    <section class="mb-5">
+        <div class="container">
+            <div class="col-lg-12">
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex align-items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                            <path
+                                d="M9 17H13M15.1804 21H6.81965C4.5109 21 2.6393 19.214 2.6393 17.0108V12.133C2.6393 11.4248 2.34447 10.7456 1.81969 10.2448C0.603805 9.0845 0.76187 7.16205 2.15251 6.19692L8.54124 1.763C10.0071 0.745668 11.9929 0.745668 13.4588 1.763L19.8475 6.19691C21.2381 7.16205 21.3962 9.0845 20.1803 10.2448C19.6555 10.7456 19.3607 11.4248 19.3607 12.133V17.0108C19.3607 19.214 17.4891 21 15.1804 21Z"
+                                stroke="#1A1A1A" stroke-opacity="0.98" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="6" height="12" viewBox="0 0 6 12" fill="none">
+                            <path d="M0.75 0.75L4.75 5.75L0.75 10.75" stroke="#1A1A1A" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span class="saving-calculator-s">Saving calculator</span>
+
+                    </div>
+
+                    <div class="calculator-select">
+                        <button class="select-btn d-flex align-items-center gap-2" id="selectBtn">
+                            Switch Calculator
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6"
+                                fill="none">
+                                <path d="M0.75 0.75L5.75 4.75L10.75 0.75" stroke="#28303F" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg> </button>
+
+                        <div class="select-dropdown" id="dropdown">
+                            <div class="group">
+                                <p class="group-title">Home Loans</p>
+                                <div class="item">Borrowing Power <span>›</span></div>
+                                <div class="item">Loan Repayment <span>›</span></div>
+                                <div class="item">Offset Account <span>›</span></div>
+                            </div>
+
+                            <div class="group">
+                                <p class="group-title">Repayment & Refinance</p>
+                                <div class="item">Refinance <span>›</span></div>
+                                <div class="item">Split Loan <span>›</span></div>
+                                <div class="item">Comparison Rate <span>›</span></div>
+                            </div>
+
+                            <div class="group">
+                                <p class="group-title">Investing & Budgeting</p>
+                                <div class="item">Savings Calculator <span>›</span></div>
+                                <div class="item">Investment Calculator <span>›</span></div>
+                                <div class="item">Budget Planner <span>›</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+    </section>
+    <section>
+        <div class="container border-an-gap-bg">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="">
+                        <div class="save-calculate-n-p">
+                            <h3>Saving Calculator</h3>
+                            <p>Enter your saving details. at it is pozement</p>
+                        </div>
+
+                        <div class="">
+                            <ul class="list-unstyled amount-list-style">
+                                <li>
+                                    <div class="w-100 d-flex justify-content-between">
+                                        <h5 class="mb-0">Initial Amount</h5>
+                                        <p class="mb-0">$5,000</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="w-100 d-flex justify-content-between">
+                                        <h5 class="mb-0">Initial Amount</h5>
+                                        <p class="mb-0">$5,000</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="w-100 d-flex justify-content-between">
+                                        <h5 class="mb-0">Initial Amount</h5>
+                                        <p class="mb-0">$5,000</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="w-100 d-flex justify-content-between">
+                                        <h5 class="mb-0">Initial Amount</h5>
+                                        <p class="mb-0">$5,000</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="mt-5 d-flex align-items-center gap-3">
+                                <a href="#"
+                                    class=" w-100 btn btn-primary btn-lg blog-btn-red rounded-pill px-5">Calculate your
+                                    savings</a>
+                                <button class="reset-button">
+                                    Reset
+
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="">
+                        <div class="chart-wrapper er">
+                            <canvas class="bg-custom-color" id="stackedChart"></canvas>
+
+                            <div class="mt-3">
+                                <p class="graph-note"><span> Note:</span> The information provided by the calculator is
+                                    intended to
+                                    provide illustrative
+                                    examples based on stated assumptions and your inputs. Calculations are meant as
+                                    estimates only and it is advised that you consult with a mortgage broker about your
+                                    specific circumstances. Financial Calculators © VisionAbacus Pty Ltd 2025</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mt-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 mx-auto">
+                    <h5 class="more-tool-title text-center">More Tools to Help You Plan Smarter</h5>
+                    <p class="more-tool-para text-center">Whether you're comparing home loans or estimating stamp duty,
+                        these quick
+                        tools give you the
+                        numbers — so you can plan your next move with confidence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 mx-auto">
+                    <div class="row">
+                        <div class="col-lg-9">
+
+                            <div class="input-body-e d-flex align-items-center position-relative">
+                                <svg class="position-absolute" style="left: 5px;" xmlns="http://www.w3.org/2000/svg"
+                                    width="23" height="23" viewBox="0 0 23 23" fill="none">
+                                    <g opacity="0.6">
+                                        <path
+                                            d="M9.12217 14.9631C7.48565 14.9631 6.09974 14.3955 4.96444 13.2604C3.82929 12.1251 3.26172 10.7391 3.26172 9.10263C3.26172 7.46612 3.82929 6.08021 4.96444 4.94491C6.09974 3.80976 7.48565 3.24219 9.12217 3.24219C10.7587 3.24219 12.1446 3.80976 13.2799 4.94491C14.415 6.08021 14.9826 7.46612 14.9826 9.10263C14.9826 9.78704 14.8678 10.4407 14.6381 11.0636C14.4083 11.6865 14.1017 12.2283 13.7183 12.689L19.2326 18.2032C19.3653 18.3358 19.4332 18.5025 19.4362 18.7035C19.4393 18.9044 19.3714 19.0743 19.2326 19.2131C19.0938 19.3519 18.9254 19.4212 18.7275 19.4212C18.5298 19.4212 18.3615 19.3519 18.2227 19.2131L12.7085 13.6988C12.2293 14.0944 11.6783 14.4041 11.0554 14.6277C10.4324 14.8513 9.78805 14.9631 9.12217 14.9631ZM9.12217 13.5258C10.357 13.5258 11.4028 13.0973 12.2597 12.2402C13.1168 11.3833 13.5454 10.3374 13.5454 9.10263C13.5454 7.86782 13.1168 6.82196 12.2597 5.96505C11.4028 5.10798 10.357 4.67945 9.12217 4.67945C7.88735 4.67945 6.84149 5.10798 5.98458 5.96505C5.12751 6.82196 4.69898 7.86782 4.69898 9.10263C4.69898 10.3374 5.12751 11.3833 5.98458 12.2402C6.84149 13.0973 7.88735 13.5258 9.12217 13.5258Z"
+                                            fill="#1F1F1F" />
+                                    </g>
+                                </svg>
+                                <input class="w-100 border-0 h-100 traditional" type="text"
+                                    placeholder="Search for Calculator ">
+                                <button class="search-btn-r">Search</button>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-3">
+                            <!-- 
+                            <div class="calculator-select">
+                                <button class="select-btn" id="selectBtn">
+                                    Switch Calculator
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6"
+                                        fill="none">
+                                        <path d="M0.75 0.75L5.75 4.75L10.75 0.75" stroke="#28303F" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg> </button>
+
+                                <div class="select-dropdown" id="dropdown">
+                                    <div class="group">
+                                        <p class="group-title">Home Loans</p>
+                                        <div class="item">Borrowing Power <span>›</span></div>
+                                        <div class="item">Loan Repayment <span>›</span></div>
+                                        <div class="item">Offset Account <span>›</span></div>
+                                    </div>
+
+                                    <div class="group">
+                                        <p class="group-title">Repayment & Refinance</p>
+                                        <div class="item">Refinance <span>›</span></div>
+                                        <div class="item">Split Loan <span>›</span></div>
+                                        <div class="item">Comparison Rate <span>›</span></div>
+                                    </div>
+
+                                    <div class="group">
+                                        <p class="group-title">Investing & Budgeting</p>
+                                        <div class="item">Savings Calculator <span>›</span></div>
+                                        <div class="item">Investment Calculator <span>›</span></div>
+                                        <div class="item">Budget Planner <span>›</span></div>
+                                    </div>
+                                </div>
+                            </div> -->
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="position-relative calculator-card-section" style="margin-top: 80px;">
+
+        <div class="container position-relative" style="z-index: 33;">
+            <div class="row g-5">
+                <div class="col-md-4">
+                    <div class="Calculator-cardrs">
+                        <div class="d-flex gap-1  flex-column">
+                            <h5>Split Loan Calculator</h5>
+                            <p>Work out the costs of splitting your loan into a fixed and variable loan.</p>
+                            <a href="">View Now</a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="Calculator-cardrs">
+                        <div class="d-flex gap-1  flex-column">
+                            <h5>Mortgage Switching
+                                Calculator</h5>
+                            <p>See what it costs to move your loan to a new lender.</p>
+                            <a href="">View Now</a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="Calculator-cardrs">
+                        <div class="d-flex gap-1  flex-column">
+                            <h5>Borrowing Power Calculator</h5>
+                            <p>Use your details to estimate how much you could borrow.</p>
+                            <a href="">View Now</a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="Calculator-cardrs">
+                        <div class="d-flex gap-1  flex-column">
+                            <h5>Comparison Rate Calculator</h5>
+                            <p>Use interest rates and fees to compare trues costs of different loans.</p>
+                            <a href="">View Now</a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="Calculator-cardrs">
+                        <div class="d-flex gap-1  flex-column">
+                            <h5>Split Loan Calculator</h5>
+                            <p>Work out the costs of splitting your loan into a fixed and variable loan.</p>
+                            <a href="">View Now</a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="Calculator-cardrs">
+                        <div class="d-flex gap-1  flex-column">
+                            <h5>Income Annualisation Calculator</h5>
+                            <p>Work out your annual income from the
+                                money you’ve received so far this year.</p>
+                            <a href="">View Now</a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="d-flex justify-content-center">
+            <button class="view-all-button border-0">View More</button>
+        </div>
+
+    </section>
+    <section class="how-we-work calulator py-5">
+        <div class="container position-relative" style="z-index: 33;">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <span class="badge bg-primary mb-3 rotate">Our Process</span>
+                    <h2 class="display-5 fw-bold mb-3 check-payment">How We Work</h2>
+                    <p class="text-muted check-payment-p">A simple, step-by-step process to help you secure the right
+                        loan with
+                        confidence.</p>
+                </div>
+
+                <div class="col-lg-8">
+                    <div class="timeline">
+                        <!-- Step 1 -->
+                        <div class="timeline-item d-flex mb-4">
+                            <div class="timeline-marker me-3">
+                                <div class="marker-dot ">
+                                    <div class="marker-inner "></div>
+                                </div>
+                                <div class="marker-line "></div>
+                            </div>
+                            <div class="timeline-content card border rounded-4 p-4 flex-grow-1">
+                                <h5 class="fw-bold">Understand Your Needs</h5>
+                                <p class="text-muted mb-0">We start by listening — to your goals, challenges, and future
+                                    plans — so we can recommend what truly fits your life, not just your paperwork.</p>
+                            </div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="timeline-item d-flex mb-4">
+                            <div class="timeline-marker me-3">
+                                <div class="marker-dot opacity-25">
+                                    <div class="marker-inner "></div>
+                                </div>
+                                <div class="marker-line dashed"></div>
+                            </div>
+                            <div class="timeline-content card border rounded-4 p-4 flex-grow-1">
+                                <h5 class="fw-bold">Compare Options & Lenders</h5>
+                                <p class="text-muted mb-0">With access to a wide network of trusted banks and lenders,
+                                    we research and compare options tailored to your situation — no bias, just what
+                                    works best for you.</p>
+                            </div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="timeline-item d-flex">
+                            <div class="timeline-marker me-3">
+                                <div class="marker-dot opacity-25">
+                                    <div class="marker-inner "></div>
+                                </div>
+                            </div>
+                            <div class="timeline-content card border rounded-4 p-4 flex-grow-1">
+                                <h5 class="fw-bold">Secure the Right Loan — Hassle-Free</h5>
+                                <p class="text-muted mb-0">We guide you through every step of the application and
+                                    approval process. From paperwork to settlement, you're supported by real people who
+                                    care.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="info-split-section py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="bg-dark-blue rounded-4 catch-up-section p-5 text-white h-100 position-relative overflow-hidden"
+                        style="min-height: 300px;">
+                        <div class=" top-0 start-0 m-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="58" height="62" viewBox="0 0 58 62"
+                                fill="none">
+                                <g filter="url(#filter0_d_781_1155)">
+                                    <path
+                                        d="M24.2334 6.875H33.4C43.5253 6.875 51.7334 15.0831 51.7334 25.2083C51.7334 35.3336 43.5253 43.5417 33.4 43.5417V51.5625C21.9417 46.9792 5.90002 40.1042 5.90002 25.2083C5.90002 15.0831 14.1081 6.875 24.2334 6.875Z"
+                                        fill="#8ACB00" />
+                                </g>
+                                <path d="M36.318 11.5C40.6513 12.1667 48.818 16.1 46.818 26.5" stroke="white"
+                                    stroke-width="2" stroke-linecap="round" stroke-dasharray="9 9" />
+                                <defs>
+                                    <filter id="filter0_d_781_1155" x="2.43187e-05" y="4.975" width="57.6334"
+                                        height="56.4875" filterUnits="userSpaceOnUse"
+                                        color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                        <feColorMatrix in="SourceAlpha" type="matrix"
+                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                        <feOffset dy="4" />
+                                        <feGaussianBlur stdDeviation="2.95" />
+                                        <feComposite in2="hardAlpha" operator="out" />
+                                        <feColorMatrix type="matrix"
+                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                                        <feBlend mode="normal" in2="BackgroundImageFix"
+                                            result="effect1_dropShadow_781_1155" />
+                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_781_1155"
+                                            result="shape" />
+                                    </filter>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="position-relative" style="margin-top: 23px;">
+                            <h3 class="fw-bold display-6 catch-up-text">Let's catch up and get started.</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="provide-section-r rounded-4 p-5 text-white h-100" style="min-height: 300px;">
+                        <h4 class="fw-bold mb-4">What we Provide</h4>
+                        <ul class="listening-white-list">
+                            <li class="mb-2 d-flex align-items-start">
+                                <!-- <i class="bi bi-check-circle-fill text-primary me-2 mt-1"></i> -->
+
+                                <span>We provide real choice, looking to find you the right deal</span>
+                            </li>
+                            <li class="mb-2 d-flex align-items-start">
+                                <!-- <i class="bi bi-check-circle-fill text-primary me-2 mt-1"></i> -->
+                                <span>We work with multiple lenders</span>
+                            </li>
+                            <li class="mb-2 d-flex align-items-start">
+                                <!-- <i class="bi bi-check-circle-fill text-primary me-2 mt-1"></i> -->
+                                <span>We may negotiate a better outcome</span>
+                            </li>
+                            <li class="mb-2 d-flex align-items-start">
+                                <!-- <i class="bi bi-check-circle-fill text-primary me-2 mt-1"></i> -->
+                                <span>We help at a time and place that suits you</span>
+                            </li>
+                            <li class="d-flex align-items-start">
+                                <!-- <i class="bi bi-check-circle-fill text-primary me-2 mt-1"></i> -->
+                                <span>We do the legwork for you</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock main_content %} 
+
