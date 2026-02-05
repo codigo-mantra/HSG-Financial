@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-{% load static  %}
+{% load static %}
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,9 +35,7 @@
             <small class="text-muted d-block">Trusted by over 10,000+ Australians for their financial needs.</small>
 
             <div class="hero-image-container">
-                    <img src="{% static 'assest/images/threelines.png' %}"
-                        alt="Consultation"
-                        class="img-fluid rounded-4">
+                <img src="{% static 'assest/images/threelines.png' %}" alt="Consultation" class="img-fluid rounded-4">
             </div>
         </div>
     </section>
@@ -208,22 +207,37 @@
                         <div class="scroller-row scroller-ltr">
                             <div class="scroller-track">
                                 <div class="logo-card">
-                                    <span class="logo-text">NAB</span>
+                                    <img src="{% static '/assest/images/slik-slider-1.svg' %}" alt="">
                                 </div>
                                 <div class="logo-card">
-                                    <span class="logo-text">AUSWIDE</span>
+                                    <img src="{% static '/assest/images/slick-slider-2.svg' %}" alt="">
                                 </div>
                                 <div class="logo-card">
-                                    <span class="logo-text">BEYOND BANK</span>
+                                    <img src="{% static '/assest/images/slick-slider-3.svg' %}" alt="">
                                 </div>
                                 <div class="logo-card highlight">
-                                    <span class="logo-text">BANKWEST</span>
+                                    <img src="{% static '/assest/images/slick-sider-4.svg' %}" alt="">
                                 </div>
                                 <div class="logo-card">
-                                    <span class="logo-text">MACQUARIE</span>
+                                    <img src="{% static '/assest/images/slik-slider-5.svg' %}" alt="">
                                 </div>
                                 <div class="logo-card">
-                                    <span class="logo-text">COMMBANK</span>
+                                    <img src="{% static '/assest/images/slick-slider-6.svg' %}" alt="">
+                                </div>
+                                <div class="logo-card">
+                                    <img src="{% static '/assest/images/slick-slider-7.svg' %}" alt="">
+                                </div>
+                                <div class="logo-card">
+                                    <img src="{% static '/assest/images/slick-slider-8.svg' %}" alt="">
+                                </div>
+                                <div class="logo-card">
+                                    <img src="{% static '/assest/images/slick-slide-9.svg' %}" alt="">
+                                </div>
+                                <div class="logo-card orange">
+                                    <img src="{% static '/assest/images/slick-slide-10.svg' %}" alt="">
+                                </div>
+                                <div class="logo-card">
+                                    <img src="{% static '/assest/images/slick-slider-11.svg' %}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -232,23 +246,39 @@
                         <div class="scroller-row scroller-rtl-two" dir="rtl">
                             <div class="scroller-track">
                                 <div class="logo-card">
-                                    <span class="logo-text">HSBC</span>
+                                    <img src="{% static '/assest/images/slide-img-1.svg' %}" alt="">
                                 </div>
                                 <div class="logo-card">
-                                    <span class="logo-text">LA TROBE FINANCIAL</span>
+                                    <img src="{% static '/assest/images/slide-img-2.svg' %}" alt="">
                                 </div>
                                 <div class="logo-card">
-                                    <span class="logo-text">ING</span>
+                                    <img src="{% static '/assest/images/slide-img-3.svg' %}" alt="">
+                                </div>
+                                <div class="logo-card amp">
+                                    <img src="{% static '/assest/images/slide-img-4.svg' %}" alt="">
                                 </div>
                                 <div class="logo-card">
-                                    <span class="logo-text">AMP</span>
+                                    <img src="{% static '/assest/images/slide-img-5.svg' %}" alt="">
                                 </div>
                                 <div class="logo-card">
-                                    <span class="logo-text">AUSTRALIAN FINANCE</span>
+                                    <img src="{% static '/assest/images/slide-img-6.svg' %}" alt="">
                                 </div>
                                 <div class="logo-card">
-                                    <span class="logo-text">WESTPAC</span>
+                                    <img src="{% static '/assest/images/slide-img-7.svg' %}" alt="">
                                 </div>
+                                <div class="logo-card">
+                                    <img src="{% static '/assest/images/slide-img-8.svg' %}" alt="">
+                                </div>
+                                <div class="logo-card">
+                                    <img src="{% static '/assest/images/slide-img-9.svg' %}" alt="">
+                                </div>
+                                <div class="logo-card">
+                                    <img src="{% static '/assest/images/slide-img-10.svg' %}" alt="">
+                                </div>
+                                <div class="logo-card">
+                                    <img src="{% static '/assest/images/slide-img-11.svg' %}" alt="">
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -367,34 +397,30 @@
 
                         Floating Tags
                         <div class="floating-tag tag-1">
-                            <i class="bi bi-check-circle-fill text-success me-2"></i>
-                            <div class="d-flex align-items-center">
-                                <p class="d-flex align-items-center">Genuine Guidance
-                                    <small class="text-muted">Real conversations, not canned advice.</small>
+                            ✅ <div class="d-flex align-items-center">
+                                <p class=""> <b>Genuine Guidance -</b>
+                                    Real conversations, not canned advice.
                                 </p>
                             </div>
                         </div>
                         <div class="floating-tag tag-2">
-                            <i class="bi bi-check-circle-fill text-success me-2"></i>
-                            <div class="d-flex align-items-center">
-                                <p class="d-flex align-items-center">Seamless Tools
-                                    <small class="text-muted">Modern calculators and digital workflows.</small>
+                            ✅ <div class="d-flex align-items-center">
+                                <p class=""> <b>Seamless Tools -</b>
+                                    Modern calculators and digital workflows.
                                 </p>
                             </div>
                         </div>
                         <div class="floating-tag tag-3">
-                            <i class="bi bi-check-circle-fill text-success me-2"></i>
-                            <div class="d-flex align-items-center">
-                                <p class="d-flex align-items-center">Smart Comparisons
-                                    <small class="text-muted">Access 50+ lenders, tailored for you.</small>
+                            ✅ <div class="d-flex align-items-center">
+                                <p class=""> <b>Smart Comparisons -</b>
+                                    Access 50+ lenders, tailored for you.
                                 </p>
                             </div>
                         </div>
                         <div class="floating-tag tag-4">
-                            <i class="bi bi-check-circle-fill text-success me-2"></i>
-                            <div class="d-flex align-items-center">
-                                <p class="d-flex align-items-center">Human First
-                                    <small class="text-muted">Your situation is unique, so is our process.</small>
+                            ✅ <div class="d-flex align-items-center">
+                                <p class=""> <b>Human First -</b>
+                                    Your situation is unique, so is our process.
                                 </p>
                             </div>
                         </div>
@@ -521,10 +547,15 @@
                     <div class="card cta-card h-100 border-0 rounded-4 text-white position-relative overflow-hidden">
                         <img src="{%  static '/assest/images/girlandboy.png' %}"
                             class="position-absolute w-100 h-100 object-fit-cover" alt="Background">
-                        <div class="card-body position-relative p-5 d-flex flex-column justify-content-center" style="background: linear-gradient(270deg, rgba(19, 31, 43, 0.00) -22.34%, rgba(19, 31, 43, 0.90) 100%), url('..{% static '/assest/images/girlandboy.png' %}') lightgray 0.094px -0.531px / 100.012% 126.643% no-repeat;
+                        <div class="card-body position-relative p-5 d-flex flex-column justify-content-center"
+                        style="background: linear-gradient(
+    270deg,
+    rgba(19, 31, 43, 0.00) -22.34%,
+    rgba(19, 31, 43, 0.90) 100%
+),
+url('{% static "assest/images/girlandboy.png" %}') 
+lightgray 0.094px -0.531px / 100.012% 126.643% no-repeat;"
 
-
-">
                             <h3 class="fw-bold mb-1 check-payment text-white "
                                 style="font-size: 44px; line-height: 140%;">Ready to Reach
                                 Your<br>Financial Goals?
@@ -562,7 +593,8 @@
                             <a href="#" class="text-primary text-decoration-none small">Download Free Guide →</a>
                         </div>
                         <div class="position-relative d-flex justify-content-center align-items-center mt-3">
-                            <img src="{%  static '/assest/images/image4.png' %}" class="img-fluid rounded-3" alt="Guide">
+                            <img src="{%  static '/assest/images/image4.png' %}" class="img-fluid rounded-3"
+                                alt="Guide">
 
                         </div>
                     </div>
@@ -592,7 +624,8 @@
                             <a href="#" class="text-primary text-decoration-none small">Download Free Guide →</a>
                         </div>
                         <div class="position-relative d-flex justify-content-center align-items-center mt-3">
-                            <img src="{%   static '/assest/images/image6.png' %}" class="img-fluid rounded-3" alt="Guide">
+                            <img src="{%   static '/assest/images/image6.png' %}" class="img-fluid rounded-3"
+                                alt="Guide">
 
                         </div>
                     </div>

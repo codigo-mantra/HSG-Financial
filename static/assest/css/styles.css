@@ -383,28 +383,29 @@ body {
     color: white;
 
 
-    strong {
+    div p {
         color: #F6F6F7;
-        text-align: center;
-        font-family: Roboto;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 140%;
-        /* 22.4px */
-        white-space: nowrap;
-        /* 25.6px */
-    }
-
-    small {
-        color: #F6F6F7 !important;
         font-family: Roboto;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
         line-height: 140%;
-        /* 25.6px */
+        margin-bottom: 0;
+        text-align: center;
     }
+
+    /* 25.6px */
+}
+
+small {
+    color: #F6F6F7 !important;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    /* 25.6px */
+}
 }
 
 /* FAQ Section Styles */
@@ -1023,7 +1024,7 @@ body {
 }
 
 .harman-bg-pic {
-    background: url(../images/Frame\ 427319211.png) center / cover no-repeat;
+    background: url(../images/thdots.png) center / cover no-repeat;
 }
 
 .bubble-right {
@@ -2287,7 +2288,7 @@ html {
 
 /* Contact Hero Section */
 .contact-hero-section {
-    background: url('../images/contactus\ bg.png');
+    background: url('../images/contactusbg.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -2488,10 +2489,10 @@ html {
 
 /* FAQ Section */
 .faq-section {
-    /* background-color: #fafafa; */
+    background-color: #fafafa;
     padding-top: 9rem !important;
     padding-bottom: 3rem;
-    margin-top: -30px;
+    margin-top: -55px;
     z-index: 22;
     position: relative;
 }
@@ -2570,6 +2571,16 @@ html {
     padding-left: 39px;
     padding-right: 39px;
     margin-bottom: 30px;
+
+
+    h2 span {
+        color: #8ACB00 !important;
+        font-family: "Cabinet Grotesk";
+        font-size: 60px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 140%;
+    }
 }
 
 .footer-links {
@@ -2710,17 +2721,25 @@ html {
 
 .logo-card {
     background: white;
-    border-radius: 20px;
+    border-radius: 14px;
     width: 120px;
     height: 120px;
     display: flex !important;
     /* Slick sets display: block by default */
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     margin: 10px;
     /* Add margin for spacing between cards in Slick */
     transition: transform 0.3s ease;
+    box-shadow: 0 4px 6.8px 0 rgba(0, 0, 0, 0.10);
+
+
+}
+
+.logo-card.amp {
+    background: #002047;
+
+
 }
 
 .logo-card:hover {
@@ -2728,7 +2747,14 @@ html {
 }
 
 .logo-card.highlight {
-    background: linear-gradient(135deg, #ff8c00 0%, #ff6b00 100%);
+    background: #002A67;
+
+}
+
+.logo-card.orange {
+    background: #FF901D;
+
+    box-shadow: 0 4px 6.8px 0 rgba(0, 0, 0, 0.10);
 }
 
 .logo-text {
@@ -2948,8 +2974,8 @@ html {
 .select-dropdown {
     position: absolute;
     top: 110%;
-    left: 0;
-    width: 100%;
+    right: 0;
+    width: 150%;
     background: #fff;
     border-radius: 12px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
@@ -2968,9 +2994,24 @@ html {
 
 .group-title {
     font-size: 12px;
-    color: #9aa0a6;
-    margin: 8px 0;
+    color: #979797;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
     font-weight: 500;
+    line-height: 160%;
+    /* 32px */
+}
+
+.group .item {
+    color: #333;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    /* 28.8px */
 }
 
 .item {

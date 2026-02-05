@@ -1009,7 +1009,7 @@ body {
 }
 
 .harman-bg-pic {
-    background: url(../images/Frame\ 427319211.png) center / cover no-repeat;
+    background: url(../../assest/images/  ) center / cover no-repeat;
 }
 
 .bubble-right {
@@ -2215,7 +2215,7 @@ html {
 
 /* Contact Hero Section */
 .contact-hero-section {
-    background: url('../images/contactus\ bg.png');
+    background: url('../images/contactusbg.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
