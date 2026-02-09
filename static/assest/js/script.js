@@ -83,10 +83,13 @@ document.addEventListener('DOMContentLoaded', function () {
                     interestRate.value = 5.2;
                     break;
                 case 'investment':
-                    loanAmount.value = 600000;
-                    interestRate.value = 5.8;
+                    loanAmount.value = 1000000;
+                    interestRate.value = 4.9;
                     break;
             }
+            [loanAmount, interestRate, loanTerm].forEach(input => {
+                updateRangeTrack(input);
+            });
             calculateLoan();
         });
     });
