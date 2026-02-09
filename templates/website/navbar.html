@@ -6,13 +6,13 @@
             <a class="navbar-brand d-flex align-items-center" href="{% url 'home_page' %}">
 
                 <div>
-                    <img src="{% static '/assest/images/image_2.png' %}" alt="">
+                    <img src="{% static '/assest/images/image_2.svg' %}" alt="">
                 </div>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse new-nav" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item dropdown mega-menu">
                         <a class="nav-link dropdown-toggle" href="#" role="button">
@@ -80,7 +80,7 @@
                                         HSG <br> Today</h3>
                                     <!-- You can use an image here or the CSS arrow -->
                                     <img class="arrow-3d-css position-absolute"
-                                        src="{% static '/assest/images/3d_dispersion_glass_shape_arrow_cursor_ Premium_PSD.png' %}"
+                                        src="{% static '/assest/images/arrow-img.png' %}"
                                         alt="">
                                     <!-- OR use an image: <img src="path-to-3d-arrow.png" alt="Get Started" class="arrow-image"> -->
                                 </div>
@@ -106,10 +106,29 @@
                             <li><a class="dropdown-item" href="{% url 'blogs_page' %}">Guides</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item ms-lg-3">
-                        <a class="btn btn-primary rounded-pill px-4" href="{% url 'contact_us' %}">Contact Us</a>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="{% url 'contact_us' %}">Contact Us</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const navbar = document.querySelector(".navbar");
+    if (!navbar) return;
+
+    window.addEventListener("scroll", () => {
+        const scrollTop = window.scrollY;
+        console.log("scroll:", scrollTop);
+
+        if (scrollTop >= 100) {
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+    });
+});
+
+    </script>

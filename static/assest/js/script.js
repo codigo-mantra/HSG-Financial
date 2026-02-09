@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const min = input.min ? input.min : 0;
         const max = input.max ? input.max : 100;
         const percent = (val - min) / (max - min) * 100;
-        input.style.background = `linear-gradient(to right, #0d3b9c 0%, #0d3b9c ${percent}%, #dee2e6 ${percent}%, #dee2e6 100%)`;
+        input.style.background = `linear-gradient(to right, #0d3b9c 0%, #0d3b9c ${percent}%, #F1F4E3 ${percent}%, #F1F4E3 100%)`;
     }
 
     // Event listeners
@@ -331,3 +331,26 @@ new Chart(ctx, {
 Chart.defaults.font.family = "Poppins";
 Chart.defaults.font.size = 12;
 Chart.defaults.color = '#4A4A4A';
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    debugger
+    const navbar = document.querySelector(".navbar");
+
+    if (!navbar) return; // safety check
+
+    window.addEventListener("scroll", () => {
+        const scrollTop = window.scrollY;
+        console.log("scrooool", scrollTop)
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+
+        if (scrollPercent >= 10) {
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+    });
+});

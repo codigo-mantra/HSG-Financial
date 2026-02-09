@@ -15,16 +15,24 @@
     <link href="{% static '/assest/css/styles.css' %}" rel="stylesheet">
 </head>
 
-<body style="background-color: white;">
+<body style="background-color: #F6F6F7;">
 
     <div class="top-bar bg-primary text-white text-center py-2">
         <small>Lorem ipsum dolor sit amet consectetur. Neque pellentesque.</small>
     </div>
     {% include './navbar.html' %}
 
-    <section class="hero-section py-5">
+    <section class="hero-section position-relative">
+<div class="w-100 overflow-hidden hero-section-lines d-flex align-items-center justify-content-center">
+
+
+
+</div>
+
+
+
         <div class="container text-center">
-            <h1 class="display-4 fw-bold mb-2">Estimate <span class="text-primary">Your Borrowing</span><br>Power in
+            <h1 class="display-4 fw-bold ">Estimate <span class="text-primary">Your Borrowing</span><br>Power in
                 Seconds</h1>
             <p class="lead text-muted cutom-40">Home, car or investment — we help Australians access lending with
                 clarity
@@ -35,12 +43,13 @@
             <small class="text-muted d-block">Trusted by over 10,000+ Australians for their financial needs.</small>
 
             <div class="hero-image-container">
-                <img src="{% static 'assest/images/threelines.png' %}" alt="Consultation" class="img-fluid rounded-4">
+                <img class="w-100 object-fit-cover h-100" src="{% static 'assest/images/threelines.png' %}"
+                    alt="Consultation" class="img-fluid rounded-4">
             </div>
         </div>
     </section>
 
-    <section class="calculator-section py-5">
+    <section class="calculator-section ">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-5 mb-4 mb-lg-0 position-relative">
@@ -113,13 +122,28 @@
 
                                 <div class="btn-group gap-3 w-100 mb-4" role="group">
                                     <button type="button" class="btn btn-outline-secondary active" data-type="home">
-                                        <i class="bi bi-house-door me-2"></i>First Home Buyer
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="23"
+                                            viewBox="0 0 21 23" fill="none">
+                                            <path
+                                                d="M0 20.5456V8.382C0 7.98852 0.0879998 7.61578 0.264 7.26378C0.440229 6.91155 0.683604 6.62154 0.994125 6.39375L8.82131 0.497063C9.25558 0.165688 9.75196 0 10.3104 0C10.8689 0 11.3667 0.165688 11.8037 0.497063L19.6309 6.39375C19.9414 6.62154 20.1848 6.91155 20.361 7.26378C20.537 7.61578 20.625 7.98852 20.625 8.382V20.5456C20.625 21.108 20.4218 21.5923 20.0155 21.9986C19.6092 22.4049 19.1249 22.6081 18.5625 22.6081H14.1732C13.8209 22.6081 13.5258 22.4889 13.2877 22.2506C13.0493 22.0125 12.9302 21.7173 12.9302 21.3651V14.6489C12.9302 14.2969 12.8111 14.0017 12.573 13.7634C12.3349 13.5253 12.0397 13.4062 11.6875 13.4062H8.9375C8.58527 13.4062 8.2901 13.5253 8.052 13.7634C7.8139 14.0017 7.69484 14.2969 7.69484 14.6489V21.3651C7.69484 21.7173 7.57568 22.0125 7.33734 22.2506C7.09924 22.4889 6.80407 22.6081 6.45184 22.6081H2.0625C1.50013 22.6081 1.01578 22.4049 0.609469 21.9986C0.203156 21.5923 0 21.108 0 20.5456Z"
+                                                fill="#211122" />
+                                        </svg> First Home Buyer
                                     </button>
                                     <button type="button" class="btn btn-outline-secondary" data-type="refinance">
-                                        <i class="bi bi-arrow-repeat me-2"></i>Refinancing Property
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none">
+                                            <path
+                                                d="M12.1492 16.3422C12.7183 16.3422 13.2293 16.2003 13.6819 15.9163C14.1344 15.6324 14.3607 15.177 14.3607 14.55C14.3607 14.0282 14.1662 13.6125 13.7772 13.303C13.388 12.9933 12.662 12.6436 11.5992 12.2537C10.571 11.8846 9.82934 11.4712 9.37417 11.0135C8.919 10.5558 8.69142 9.95133 8.69142 9.2C8.69142 8.55517 8.92417 7.96475 9.38967 7.42875C9.855 6.89292 10.5056 6.55125 11.3414 6.40375V5.875C11.3414 5.693 11.4098 5.53375 11.5464 5.39725C11.6829 5.26058 11.8422 5.19225 12.0242 5.19225C12.2062 5.19225 12.3654 5.26058 12.5019 5.39725C12.6386 5.53375 12.7069 5.693 12.7069 5.875V6.40375C13.1774 6.43708 13.6153 6.59 14.0204 6.8625C14.4254 7.135 14.7562 7.47317 15.0127 7.877C15.1037 8.01533 15.112 8.16308 15.0377 8.32025C14.9633 8.47725 14.8383 8.58783 14.6627 8.652C14.4973 8.716 14.3303 8.72433 14.1617 8.677C13.9932 8.6295 13.855 8.53333 13.7472 8.3885C13.555 8.15633 13.3194 7.96817 13.0404 7.824C12.7616 7.67983 12.4312 7.60775 12.0492 7.60775C11.4273 7.60775 10.9398 7.75517 10.5867 8.05C10.2335 8.34483 10.0569 8.72817 10.0569 9.2C10.0569 9.67183 10.2293 10.0392 10.5742 10.302C10.919 10.5648 11.6171 10.8758 12.6684 11.2348C13.8684 11.6681 14.6748 12.1539 15.0877 12.6923C15.5005 13.2308 15.7069 13.85 15.7069 14.55C15.7069 15.027 15.6188 15.4456 15.4424 15.8057C15.2661 16.1661 15.0357 16.469 14.7512 16.7145C14.4665 16.96 14.1424 17.1539 13.7789 17.2962C13.4154 17.4384 13.0414 17.5384 12.6569 17.5963V18.125C12.6569 18.307 12.5886 18.4662 12.4519 18.6028C12.3154 18.7394 12.1562 18.8078 11.9742 18.8078C11.7922 18.8078 11.6329 18.7394 11.4964 18.6028C11.3598 18.4662 11.2914 18.307 11.2914 18.125V17.5462C10.6774 17.4129 10.1454 17.1741 9.69542 16.8298C9.24542 16.4856 8.88067 16.0366 8.60117 15.4827C8.52034 15.3071 8.51967 15.1333 8.59917 14.9615C8.67867 14.7897 8.80625 14.6718 8.98192 14.6077C9.14725 14.5436 9.31584 14.5445 9.48767 14.6105C9.65951 14.6767 9.79092 14.7873 9.88192 14.9423C10.1409 15.4012 10.4656 15.7493 10.8559 15.9865C11.2463 16.2237 11.6773 16.3422 12.1492 16.3422ZM11.9992 22.5C10.0492 22.5 8.27959 22.0173 6.69042 21.0518C5.10142 20.0864 3.85501 18.7928 2.95117 17.171V19.4038C2.95117 19.6166 2.87934 19.7948 2.73567 19.9385C2.59217 20.082 2.41401 20.1538 2.20117 20.1538C1.98834 20.1538 1.81009 20.082 1.66642 19.9385C1.52292 19.7948 1.45117 19.6166 1.45117 19.4038V15.5577C1.45117 15.2999 1.53734 15.0848 1.70967 14.9125C1.88217 14.74 2.09726 14.6538 2.35492 14.6538H6.20117C6.41401 14.6538 6.59217 14.7256 6.73567 14.8693C6.87934 15.0128 6.95117 15.1909 6.95117 15.4038C6.95117 15.6166 6.87934 15.7948 6.73567 15.9385C6.59217 16.082 6.41401 16.1538 6.20117 16.1538H4.11067C4.83367 17.6103 5.90226 18.7821 7.31642 19.6693C8.73059 20.5564 10.2915 21 11.9992 21C14.3235 21 16.3299 20.2327 18.0184 18.698C19.7069 17.1635 20.6807 15.2482 20.9397 12.952C20.9665 12.743 21.0543 12.5737 21.2029 12.4443C21.3518 12.3147 21.5306 12.25 21.7394 12.25C21.9523 12.25 22.1314 12.3215 22.2769 12.4645C22.4224 12.6073 22.4818 12.7782 22.4549 12.977C22.3318 14.3167 21.9747 15.5637 21.3837 16.7182C20.7927 17.8727 20.0296 18.8785 19.0944 19.7355C18.1591 20.5925 17.086 21.2675 15.8752 21.7605C14.6642 22.2535 13.3722 22.5 11.9992 22.5ZM11.9992 3C9.71334 3 7.71817 3.75608 6.01367 5.26825C4.30917 6.78042 3.32417 8.70383 3.05867 11.0385C3.03184 11.2475 2.94409 11.4183 2.79542 11.551C2.64659 11.6837 2.46776 11.75 2.25892 11.75C2.03959 11.75 1.85876 11.6785 1.71642 11.5355C1.57426 11.3927 1.51659 11.2187 1.54342 11.0135C1.67926 9.64817 2.04751 8.38658 2.64817 7.22875C3.24884 6.07108 4.01684 5.06858 4.95217 4.22125C5.88734 3.37375 6.95717 2.70833 8.16167 2.225C9.36617 1.74167 10.6453 1.5 11.9992 1.5C13.93 1.5 15.6996 1.98433 17.3079 2.953C18.9163 3.9215 20.1627 5.22633 21.0472 6.8675V4.59625C21.0472 4.38342 21.119 4.20517 21.2627 4.0615C21.4062 3.918 21.5843 3.84625 21.7972 3.84625C22.01 3.84625 22.1883 3.918 22.3319 4.0615C22.4754 4.20517 22.5472 4.38342 22.5472 4.59625V8.44225C22.5472 8.70008 22.461 8.91517 22.2887 9.0875C22.1162 9.26 21.9011 9.34625 21.6434 9.34625H17.7972C17.5843 9.34625 17.4062 9.27442 17.2627 9.13075C17.119 8.98725 17.0472 8.80908 17.0472 8.59625C17.0472 8.38342 17.119 8.20517 17.2627 8.0615C17.4062 7.918 17.5843 7.84625 17.7972 7.84625H19.8877C19.1838 6.41542 18.1233 5.25 16.7059 4.35C15.2886 3.45 13.7197 3 11.9992 3Z"
+                                                fill="#211122" />
+                                        </svg> Refinancing Property
                                     </button>
                                     <button type="button" class="btn btn-outline-secondary" data-type="investment">
-                                        <i class="bi bi-piggy-bank me-2"></i>Investing in Property
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="21"
+                                            viewBox="0 0 22 21" fill="none">
+                                            <path
+                                                d="M17.625 13.5644C17.5694 13.0632 17.3753 12.5758 17.0427 12.1022C16.7101 11.6286 16.257 11.2827 15.6834 11.0646L7.67081 7.96656C7.55833 7.93045 7.44629 7.90129 7.33471 7.87908C7.22313 7.85688 7.09556 7.84577 6.95202 7.84577H5.75006V5.77904C5.75006 5.45964 5.82265 5.15865 5.96781 4.87608C6.11298 4.59333 6.3161 4.36313 6.57719 4.18546L11.9313 0.364542C12.1115 0.234903 12.2957 0.141737 12.4841 0.0850421C12.6724 0.0283476 12.8649 0 13.0615 0C13.2581 0 13.4549 0.0283476 13.6519 0.0850421C13.8489 0.141737 14.0295 0.234903 14.1938 0.364542L19.5479 4.18546C19.809 4.36313 20.0121 4.59333 20.1573 4.87608C20.3025 5.15865 20.3751 5.45964 20.3751 5.77904V13.5644H17.625ZM14.1459 6.21048C14.2764 6.21048 14.3906 6.16146 14.4885 6.06342C14.5865 5.96556 14.6356 5.85136 14.6356 5.72081C14.6356 5.59027 14.5865 5.47607 14.4885 5.37821C14.3906 5.28017 14.2764 5.23115 14.1459 5.23115C14.0154 5.23115 13.9012 5.28017 13.8033 5.37821C13.7053 5.47607 13.6562 5.59027 13.6562 5.72081C13.6562 5.85136 13.7053 5.96556 13.8033 6.06342C13.9012 6.16146 14.0154 6.21048 14.1459 6.21048ZM11.9792 6.21048C12.1098 6.21048 12.224 6.16146 12.3218 6.06342C12.4199 5.96556 12.4689 5.85136 12.4689 5.72081C12.4689 5.59027 12.4199 5.47607 12.3218 5.37821C12.224 5.28017 12.1098 5.23115 11.9792 5.23115C11.8487 5.23115 11.7345 5.28017 11.6366 5.37821C11.5386 5.47607 11.4896 5.59027 11.4896 5.72081C11.4896 5.85136 11.5386 5.96556 11.6366 6.06342C11.7345 6.16146 11.8487 6.21048 11.9792 6.21048ZM14.1459 8.37715C14.2764 8.37715 14.3906 8.32812 14.4885 8.23008C14.5865 8.13222 14.6356 8.01802 14.6356 7.88748C14.6356 7.75694 14.5865 7.64274 14.4885 7.54488C14.3906 7.44683 14.2764 7.39781 14.1459 7.39781C14.0154 7.39781 13.9012 7.44683 13.8033 7.54488C13.7053 7.64274 13.6562 7.75694 13.6562 7.88748C13.6562 8.01802 13.7053 8.13222 13.8033 8.23008C13.9012 8.32812 14.0154 8.37715 14.1459 8.37715ZM11.9792 8.37715C12.1098 8.37715 12.224 8.32812 12.3218 8.23008C12.4199 8.13222 12.4689 8.01802 12.4689 7.88748C12.4689 7.75694 12.4199 7.64274 12.3218 7.54488C12.224 7.44683 12.1098 7.39781 11.9792 7.39781C11.8487 7.39781 11.7345 7.44683 11.6366 7.54488C11.5386 7.64274 11.4896 7.75694 11.4896 7.88748C11.4896 8.01802 11.5386 8.13222 11.6366 8.23008C11.7345 8.32812 11.8487 8.37715 11.9792 8.37715ZM12.7292 20.8645C12.9 20.9118 13.1021 20.9319 13.3356 20.9249C13.569 20.918 13.7662 20.8868 13.9271 20.8311L21.4584 18.1583C21.4584 17.6 21.2643 17.1375 20.8761 16.7708C20.4879 16.4041 20.0223 16.2208 19.4791 16.2208H12.9751C12.7682 16.2208 12.5522 16.2076 12.3273 16.1812C12.1021 16.1548 11.8986 16.1084 11.7168 16.0417L10.0666 15.473C9.93606 15.4257 9.84371 15.3423 9.78954 15.223C9.73538 15.1035 9.72635 14.9789 9.76246 14.8493C9.79857 14.7359 9.88018 14.6483 10.0073 14.5865C10.1344 14.5246 10.2632 14.5173 10.3938 14.5646L11.7791 15.0667C11.9625 15.1375 12.1532 15.1878 12.3511 15.2176C12.549 15.2476 12.773 15.2625 13.023 15.2625H15.096C15.3695 15.2625 15.6024 15.1747 15.7947 14.999C15.9872 14.8233 16.0834 14.5875 16.0834 14.2916C16.0834 14.0249 15.9893 13.7569 15.801 13.4875C15.6128 13.2181 15.382 13.0348 15.1084 12.9374L8.09575 10.3458C7.98326 10.3126 7.87078 10.2835 7.75829 10.2584C7.64581 10.2334 7.52989 10.221 7.41054 10.221H5.41667V18.7582L12.7292 20.8645ZM0 18.9291C0 19.3929 0.161868 19.7867 0.485604 20.1105C0.80916 20.434 1.20286 20.5958 1.66671 20.5958H2.12523C2.58908 20.5958 2.98278 20.434 3.30633 20.1105C3.62989 19.7867 3.79167 19.3929 3.79167 18.9291V11.8874C3.79167 11.4236 3.62989 11.0299 3.30633 10.7063C2.98278 10.3828 2.58908 10.221 2.12523 10.221H1.66671C1.20286 10.221 0.80916 10.3828 0.485604 10.7063C0.161868 11.0299 0 11.4236 0 11.8874V18.9291Z"
+                                                fill="#211122" />
+                                        </svg> Investing in Property
                                     </button>
                                 </div>
 
@@ -196,7 +220,9 @@
         </div>
     </section>
 
-    <section>
+<section class="position-relative blur-curcal">
+
+    <section class="one-platform-lender">
 
         <div class="container">
             <div class="main-container">
@@ -298,7 +324,7 @@
         </div>
     </section>
 
-    <section class="services-section py-5">
+    <section class="services-section ">
         <div class="container">
             <div class="text-center mb-5">
                 <span class="badge bg-primary rotate mb-3">Loan Types We Offer</span>
@@ -381,10 +407,10 @@
             </div>
         </div>
     </section>
-
-    <section class="why-section py-5">
+</section>
+    <section class="why-section ">
         <div class="container-fluid px-5">
-            <div class="bg-dark-blue blu rounded-5 p-5 position-relative overflow-hidden">
+            <div class="bg-dark-blue blu rounded-5 px-lg-5 p-3 position-relative overflow-hidden ">
                 <div class="row align-items-center">
                     <div class="col-lg-6 text-white">
                         <span class="badge bg-primary rotate mb-1">Check Your Repayment</span>
@@ -430,7 +456,7 @@
         </div>
     </section>
 
-    <section class="testimonials-section py-5">
+    <section class="testimonials-section">
         <div class="container">
             <div class="text-center mb-5">
                 <span class="badge bg-primary rotate mb-3">Testimonials</span>
@@ -449,8 +475,10 @@
                                 us through every step. They found us a loan with a great rate, and we're now in our
                                 dream home.</p>
                             <div class="d-flex align-items-center">
-                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop"
-                                    class="rounded-circle me-3" width="40" height="40" alt="User">
+                                <div class="img-crad-cover">
+                                    <img src="{% static '/assest/images/cards-img.svg' %}" class="rounded-circle me-3"
+                                        width="40" height="40" alt="User">
+                                </div>
                                 <div>
                                     <div class="fw-bold small">Sophie & Luke, Hobart</div>
                                     <div class="text-warning small">
@@ -474,9 +502,10 @@
                                 us through every step. They found us a loan with a great rate, and we're now in our
                                 dream home.</p>
                             <div class="d-flex align-items-center">
-                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
-                                    class="rounded-circle me-3 border border-3 border-white" width="40" height="40"
-                                    alt="User">
+                                <div class="img-crad-cover white">
+                                    <img src="{% static '/assest/images/cards-img.svg' %}"
+                                        class="rounded-circle me-3 border  " width="40" height="40" alt="User">
+                                </div>
                                 <div>
                                     <div class="fw-bold small text-white">Sophie & Luke, Hobart</div>
                                     <div class="text-warning small">
@@ -488,7 +517,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="quote-mark position-absolute opacity-25">"</div>
+                            {% comment %} <div class="quote-mark position-absolute opacity-25">"</div> {% endcomment %}
                         </div>
                     </div>
                 </div>
@@ -500,8 +529,10 @@
                                 us through every step. They found us a loan with a great rate, and we're now in our
                                 dream home.</p>
                             <div class="d-flex align-items-center">
-                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop"
-                                    class="rounded-circle me-3" width="40" height="40" alt="User">
+                                <div class="img-crad-cover ">
+                                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop"
+                                        class="rounded-circle me-3" width="40" height="40" alt="User">
+                                </div>
                                 <div>
                                     <div class="fw-bold small">Sophie & Luke, Hobart</div>
                                     <div class="text-warning small">
@@ -527,8 +558,10 @@
                                 us through every step. They found us a loan with a great rate, and we're now in our
                                 dream home.</p>
                             <div class="d-flex align-items-center">
-                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop"
-                                    class="rounded-circle me-3" width="40" height="40" alt="User">
+                                <div class="img-crad-cover green">
+                                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop"
+                                        class="rounded-circle me-3" width="40" height="40" alt="User">
+                                </div>
                                 <div>
                                     <div class="fw-bold small">Sophie & Luke, Hobart</div>
                                     <div class="text-warning small">
@@ -547,18 +580,11 @@
                     <div class="card cta-card h-100 border-0 rounded-4 text-white position-relative overflow-hidden">
                         <img src="{%  static '/assest/images/girlandboy.png' %}"
                             class="position-absolute w-100 h-100 object-fit-cover" alt="Background">
-                        <div class="card-body position-relative p-5 d-flex flex-column justify-content-center"
-                        style="background: linear-gradient(
-    270deg,
-    rgba(19, 31, 43, 0.00) -22.34%,
-    rgba(19, 31, 43, 0.90) 100%
-),
-url('{% static "assest/images/girlandboy.png" %}') 
-lightgray 0.094px -0.531px / 100.012% 126.643% no-repeat;"
-
-                            <h3 class="fw-bold mb-1 check-payment text-white "
-                                style="font-size: 44px; line-height: 140%;">Ready to Reach
-                                Your<br>Financial Goals?
+                        <div class="card-body girl-n-boy position-relative p-5 d-flex flex-column justify-content-center" >
+                            <h3
+                            class="fw-bold mb-1 check-payment text-white " style="font-size: 44px; line-height: 140%;">
+                            Ready to Reach
+                            Your<br>Financial Goals?
                             </h3>
                             <p class="mb-4 opacity-75 check-payment-p" style="opacity: 0.7;">Whether you're buying your
                                 first home,
@@ -574,7 +600,7 @@ lightgray 0.094px -0.531px / 100.012% 126.643% no-repeat;"
         </div>
     </section>
 
-    <section class="guides-section py-5">
+    <section class="guides-section ">
         <div class="container">
             <span class="badge bg-primary rotate mb-3">Insights to Borrow Better</span>
             <h2 class="display-5 fw-bold mb-3 check-payment" style="line-height: 120%;">Get started with our<br>free
@@ -633,7 +659,7 @@ lightgray 0.094px -0.531px / 100.012% 126.643% no-repeat;"
             </div>
         </div>
     </section>
-    
+
     {% include './footer.html' %}
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
