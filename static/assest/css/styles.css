@@ -707,6 +707,74 @@ small {
 
 }
 
+@media (max-width:1600px) {
+
+    .tag-1 {
+        top: 15%;
+        right: 2vw;
+        transform: rotate(8.232deg);
+
+
+    }
+
+    .tag-2 {
+        top: -3%;
+        left: -3vw;
+        transform: rotate(-6.135deg);
+
+
+    }
+
+    .tag-3 {
+        top: 32%;
+        left: -6vw;
+        transform: rotate(-9.885deg);
+
+    }
+
+    .tag-4 {
+        bottom: 13%;
+        right: 2vw;
+        transform: rotate(12.071deg);
+
+    }
+}
+
+@media (max-width:1400px) {
+
+    .tag-1 {
+        top: 15%;
+        right: 0vw;
+        transform: rotate(8.232deg);
+
+
+    }
+
+    .tag-2 {
+        top: -3%;
+        left: -6vw;
+        transform: rotate(-6.135deg);
+
+
+    }
+
+    .tag-3 {
+        top: 32%;
+        left: -9vw;
+        transform: rotate(-9.885deg);
+
+    }
+
+    .tag-4 {
+        bottom: 13%;
+        right: -2vw;
+        transform: rotate(12.071deg);
+
+    }
+}
+
+
+
 @media (max-width: 991px) {
     .floating-tag {
         position: relative !important;
