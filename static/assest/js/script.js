@@ -423,3 +423,14 @@ document.addEventListener("DOMContentLoaded", function () {
         searchBar.classList.add("d-none");
     });
 });
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const hasInfoSplit = document.querySelector(".info-split-section");
+    const footer = document.querySelector(".footer-section");
+
+    if (hasInfoSplit && footer) {
+        footer.style.paddingTop = "10px";
+    }
+});
