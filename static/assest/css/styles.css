@@ -438,7 +438,7 @@ body {
 }
 
 .underline-on-hover {
-    text-decoration: none;
+    text-decoration: none !important;
     color: var(--Blue-Primary, #0A379E) !important;
     text-align: center;
     font-family: Poppins;
@@ -458,7 +458,7 @@ body {
     font-weight: 500;
     line-height: 160%;
     /* 28.8px */
-    text-decoration-line: underline;
+    text-decoration-line: underline !important;
     text-decoration-style: solid;
     text-decoration-skip-ink: auto;
     text-decoration-thickness: auto;
