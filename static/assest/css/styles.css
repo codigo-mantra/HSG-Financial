@@ -473,7 +473,7 @@ body {
     max-height: 500px;
     object-fit: contain;
     position: relative;
-    transform: translateY(18%);
+    transform: translateY(37%);
     left: 22%;
     z-index: 2;
 }
@@ -493,7 +493,7 @@ body {
     background: rgba(0, 0, 0, 0.00);
     border-radius: 30px;
     color: white;
-    box-shadow: -2px -1px 1px, 2px 1px 1px;
+    box-shadow: -1px -1px 0px #6c80a5, 1px 1px 0px #6c80a5;
 
 
     div p {
@@ -678,31 +678,31 @@ small {
 }
 
 .tag-1 {
-    top: -1%;
-    right: 0px;
+    top: 15%;
+    right: 9%;
     transform: rotate(8.232deg);
 
 
 }
 
 .tag-2 {
-    top: 16%;
-    left: -29%;
+    top: -3%;
+    left: -7%;
     transform: rotate(-6.135deg);
 
 
 }
 
 .tag-3 {
-    top: 66%;
-    left: -25%;
+    top: 32%;
+    left: -13%;
     transform: rotate(-9.885deg);
 
 }
 
 .tag-4 {
-    bottom: 23%;
-    right: 1%;
+    bottom: 13%;
+    right: 5%;
     transform: rotate(12.071deg);
 
 }
@@ -832,7 +832,7 @@ small {
 .bg-dark-blue.blu {
     background: url('../images/Frame\ 427319209.svg') center / cover no-repeat;
     padding-top: 70px !important;
-    padding-bottom: 70px !important;
+    padding-bottom: 140px !important;
 }
 
 .testimonial-card.bg-primaryy {
@@ -3119,6 +3119,7 @@ html {
     position: relative;
     /* width: 260px; */
     height: 100%;
+    z-index: 222;
 }
 
 .select-btn {

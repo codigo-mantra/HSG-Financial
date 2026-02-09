@@ -336,21 +336,18 @@ Chart.defaults.color = '#4A4A4A';
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    debugger
     const navbar = document.querySelector(".navbar");
-
-    if (!navbar) return; // safety check
+    if (!navbar) return;
 
     window.addEventListener("scroll", () => {
         const scrollTop = window.scrollY;
-        console.log("scrooool", scrollTop)
-        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const scrollPercent = (scrollTop / docHeight) * 100;
+        console.log("scroll:", scrollTop);
 
-        if (scrollPercent >= 10) {
+        if (scrollTop >= 10) {
             navbar.classList.add("scrolled");
         } else {
             navbar.classList.remove("scrolled");
         }
     });
 });
+
