@@ -213,6 +213,13 @@ body {
 
 }
 
+/* How We Work Section */
+.how-we-work {
+    padding-bottom: 100px !important;
+    /* Base padding */
+}
+
+
 /* Hero Section */
 .hero-section {
     position: relative;
@@ -557,7 +564,6 @@ small {
     font-weight: 400;
     line-height: 140%;
     /* 25.6px */
-}
 }
 
 /* FAQ Section Styles */
@@ -911,7 +917,7 @@ small {
 .testimonial-card:not(.bg-primaryy):before {
     content: "";
     position: absolute;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='55' height='46' viewBox='0 0 55 46' fill='none'%3E%3Cpath d='M4.78261 0L0.31884 11.5401C6.37681 11.8606 11 12.9826 11 19.0732V21.1568H-3.8147e-06V46H24.2319V20.5157C24.2319 8.01394 17.6957 1.28223 4.78261 0ZM35.5507 0L31.087 11.5401C37.1449 11.8606 41.7681 12.9826 41.7681 19.0732V21.1568H30.7681V46H55V20.5157C55 8.01394 48.4638 1.28223 35.5507 0Z' fill='%239F1A10' fill-opacity='0.04'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='55' height='46' viewBox='0 0 55 46' fill='none'%3E%3Cpath d='M4.78261 0L0.31884 11.5401C6.37681 11.8606 11 12.9826 11 19.0732V21.1568H-3.8147e-06V46H24.2319V20.5157C24.2319 8.01394 17.6957 1.28223 4.78261 0ZM35.5507 0L31.087 11.5401C37.1449 11.8606 41.7681 12.9826 41.7681 19.0732V21.1568H30.7681V46H55V20.5157C55 8.01394 48.4638 1.28223 35.5507 0Z' fill='%239F1A10' fill-opacity='0.04'/%3E%3Csvg%3E");
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
@@ -1313,8 +1319,26 @@ small {
 }
 
 .timeline-item {
-    position: relative;
+    position: sticky;
+    top: 150px;
+    margin-bottom: 20px;
+    /* Tighter overlap */
+    z-index: 1;
+    transition: all 0.3s ease;
 }
+
+.timeline-item:nth-child(1) {
+    z-index: 1;
+}
+
+.timeline-item:nth-child(2) {
+    z-index: 2;
+}
+
+.timeline-item:nth-child(3) {
+    z-index: 3;
+}
+
 
 .timeline-marker {
     position: relative;
@@ -1376,7 +1400,11 @@ small {
 .timeline-content {
     border: 1px solid #e0e0e0 !important;
     border-radius: 1rem !important;
-    margin-bottom: 74px;
+    margin-bottom: 40px;
+    /* Reduced from 74px to allow closer overlapping */
+    background-color: white;
+    transition: all 0.3s ease;
+    transform-origin: left center;
 
 
     h5 {
@@ -3915,4 +3943,5 @@ html {
 
 .select-dropdown.active {
     display: block;
+}
 }

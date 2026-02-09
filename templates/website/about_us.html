@@ -1,408 +1,397 @@
 <!doctype html>
 <html lang="en">
-  {%load static %}
+{%load static %}
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About HSG Financial - Our Story & Values</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
-    />
-    <link href="{% static '/assest/css/styles.css' %}" rel="stylesheet" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About HSG Financial - Our Story & Values</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+  <link href="{% static '/assest/css/styles.css' %}" rel="stylesheet" />
 
 
-    <style>
-        .footer-section{
-            padding-top:10px;
-        }
-    </style>
-  </head>
+  <style>
+    .footer-section {
+      padding-top: 10px;
+    }
+  </style>
+</head>
 
-  <body>
-    <div class="top-bar bg-primary text-white text-center py-2">
-      <small>Expert lending solutions tailored to your financial goals.</small>
+<body>
+  <div class="top-bar bg-primary text-white text-center py-2">
+    <small>Expert lending solutions tailored to your financial goals.</small>
+  </div>
+
+  <!-- Navigation -->
+  {% include './navbar.html' %}
+
+  <!-- About Hero Section -->
+  <section class="about-hero position-relative overflow-hidden">
+    <div class="bg-blue-section py-5 text-center">
+      <div class="container">
+        <h1 class="display-3 aboutus-title fw-bold text-white">
+          About <span class="highlight-lime">HSG Financial</span>
+        </h1>
+        <p class="lead text-white-50 about-hero-para mb-0">
+          We empower Australians to achieve their property dreams with
+          tailored lending solutions and expert guidance.
+        </p>
+      </div>
     </div>
 
-    <!-- Navigation -->
-    {% include './navbar.html' %}
+    <!-- Overlapping Image -->
+    <div class="container">
+      <div class="about-hero-image position-relative">
+        <img src="{% static '/assest/images/abiutushero.jpg' %}" alt="Team high five"
+          class="img-fluid rounded-4 shadow-lg w-100" style="object-fit: cover; height: 500px" />
+      </div>
+    </div>
+  </section>
 
-    <!-- About Hero Section -->
-    <section class="about-hero position-relative overflow-hidden">
-      <div class="bg-blue-section py-5 text-center">
-        <div class="container">
-          <h1 class="display-3 aboutus-title fw-bold text-white">
-            About <span class="highlight-lime">HSG Financial</span>
-          </h1>
-          <p class="lead text-white-50 about-hero-para mb-0">
-            We empower Australians to achieve their property dreams with
-            tailored lending solutions and expert guidance.
+  <!-- It's Not Magic Section -->
+  <section class="magic-section pt-0">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-5 mb-4 mb-lg-0">
+          <div class="badge-wrapper mb-3">
+            <span class="badge bg-primaryMagic rotate">Check Your Repayment</span>
+          </div>
+          <h2 class="display-4 fw-bold check-payment">
+            It's not magic.<br />It's HSG Financial.
+          </h2>
+        </div>
+        <div class="col-lg-6 offset-lg-1">
+          <p class="text-muted lead check-payment-p">
+            At HSG Financial, we understand that every financial situation is
+            unique. That's why we take a personalized approach to finding the
+            right loan for you. Our team of experienced brokers will work with
+            you to understand your needs and goals, and then shop around to
+            find the best possible loan terms. With HSG Financial, you can be
+            confident that you're getting the best possible deal on your
+            mortgage.
           </p>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Overlapping Image -->
-      <div class="container">
-        <div class="about-hero-image position-relative">
-          <img
-            src="{% static '/assest/images/abiutushero.jpg' %}"
-            alt="Team high five"
-            class="img-fluid rounded-4 shadow-lg w-100"
-            style="object-fit: cover; height: 500px"
-          />
+  <!-- Core Values Section -->
+  <section class="core-values-section e">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="badge bg-primary mb-3 rotate">What We Stand For</span>
+        <h2 class="display-5 fw-bold check-payment">Our Core Values.</h2>
+        <p class="text-muted mt-0 mx-auto check-payment-p" style="max-width: 800px">
+          At HSG Financial, we offer a range of loan solutions tailored to fit
+          your unique needs. Whether you're buying a new home, refinancing, or
+          investing in property, we've got you covered.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card value-card h-100 border rounded-4 p-4">
+            <div class="card-body">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <path
+                  d="M10.0007 31.6656H16.1544V23.2039C16.1544 22.8225 16.2834 22.5028 16.5415 22.2447C16.7995 21.987 17.1193 21.8581 17.5007 21.8581H22.5007C22.882 21.8581 23.2018 21.987 23.4598 22.2447C23.7179 22.5028 23.8469 22.8225 23.8469 23.2039V31.6656H30.0007V17.1785C30.0007 17.0074 29.9633 16.8524 29.8886 16.7135C29.8138 16.5746 29.7123 16.4518 29.584 16.3452L20.6098 9.58224C20.4387 9.4328 20.2357 9.35807 20.0007 9.35807C19.7657 9.35807 19.5626 9.4328 19.3915 9.58224L10.4173 16.3452C10.289 16.4518 10.1875 16.5746 10.1127 16.7135C10.038 16.8524 10.0007 17.0074 10.0007 17.1785V31.6656ZM8.33398 31.6656V17.1785C8.33398 16.7521 8.4294 16.3482 8.62023 15.9668C8.81079 15.5854 9.0744 15.2714 9.41107 15.0247L18.3852 8.22974C18.855 7.87085 19.3918 7.69141 19.9957 7.69141C20.5995 7.69141 21.1397 7.87085 21.6161 8.22974L30.5902 15.0247C30.9269 15.2714 31.1905 15.5854 31.3811 15.9668C31.5719 16.3482 31.6673 16.7521 31.6673 17.1785V31.6656C31.6673 32.1122 31.5012 32.5017 31.169 32.8339C30.8368 33.1661 30.4473 33.3322 30.0007 33.3322H23.5265C23.1448 33.3322 22.8251 33.2032 22.5673 32.9452C22.3093 32.6871 22.1802 32.3674 22.1802 31.986V23.5247H17.8211V31.986C17.8211 32.3674 17.692 32.6871 17.434 32.9452C17.1762 33.2032 16.8565 33.3322 16.4748 33.3322H10.0007C9.55398 33.3322 9.16454 33.1661 8.83232 32.8339C8.5001 32.5017 8.33398 32.1122 8.33398 31.6656Z"
+                  fill="#0336BA" />
+              </svg>
+              <h5 class="fw-bold">Transparency</h5>
+              <p class="text-muted">
+                We keep things clear, honest and upfront - no fine print or
+                surprise
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card value-card h-100 border rounded-4 p-4">
+            <div class="card-body">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <path
+                  d="M8.71727 30V32.3075C8.71727 32.5925 8.61727 32.8347 8.41727 33.0342C8.21699 33.2336 7.97379 33.3333 7.68768 33.3333C7.40185 33.3333 7.16018 33.2336 6.96268 33.0342C6.7649 32.8347 6.66602 32.5925 6.66602 32.3075V20.7117C6.66602 20.56 6.67463 20.4082 6.69185 20.2563C6.70879 20.1046 6.74254 19.9536 6.7931 19.8033L9.63727 11.8012C9.81449 11.2676 10.1357 10.834 10.601 10.5004C11.0663 10.1668 11.5868 10 12.1627 10H27.836C28.4118 10 28.9324 10.1668 29.3977 10.5004C29.863 10.834 30.1842 11.2676 30.3614 11.8012L33.2056 19.8033C33.2562 19.9536 33.2899 20.1046 33.3068 20.2563C33.3241 20.4082 33.3327 20.56 33.3327 20.7117V32.3075C33.3327 32.5925 33.2325 32.8347 33.0323 33.0342C32.8323 33.2336 32.5892 33.3333 32.3031 33.3333C32.0173 33.3333 31.7755 33.2336 31.5777 33.0342C31.3802 32.8347 31.2814 32.5925 31.2814 32.3075V30H8.71727ZM9.02518 18.5896H30.9735L28.7752 12.3396C28.6896 12.126 28.5613 11.9604 28.3902 11.8429C28.2193 11.7254 28.0164 11.6667 27.7814 11.6667H12.2173C11.9823 11.6667 11.7793 11.7254 11.6085 11.8429C11.4374 11.9604 11.3091 12.126 11.2235 12.3396L9.02518 18.5896ZM12.3785 26.1538C12.8971 26.1538 13.3353 25.9724 13.6931 25.6096C14.0512 25.2465 14.2302 24.8058 14.2302 24.2875C14.2302 23.7689 14.0487 23.3307 13.6856 22.9729C13.3228 22.6149 12.8821 22.4358 12.3635 22.4358C11.8452 22.4358 11.407 22.6174 11.0489 22.9804C10.6912 23.3432 10.5123 23.7839 10.5123 24.3025C10.5123 24.8208 10.6937 25.259 11.0564 25.6171C11.4195 25.9749 11.8602 26.1538 12.3785 26.1538ZM27.6352 26.1538C28.1535 26.1538 28.5917 25.9724 28.9498 25.6096C29.3075 25.2465 29.4864 24.8058 29.4864 24.2875C29.4864 23.7689 29.305 23.3307 28.9423 22.9729C28.5792 22.6149 28.1385 22.4358 27.6202 22.4358C27.1016 22.4358 26.6634 22.6174 26.3056 22.9804C25.9475 23.3432 25.7685 23.7839 25.7685 24.3025C25.7685 24.8208 25.95 25.259 26.3131 25.6171C26.6759 25.9749 27.1166 26.1538 27.6352 26.1538ZM8.33268 28.3333H31.666V20.2563H8.33268V28.3333Z"
+                  fill="#0336BA" />
+              </svg>
+              <h5 class="fw-bold">Integrity</h5>
+              <p class="text-muted">
+                Your best interest is our priority. Always.No exceptions
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card value-card h-100 border rounded-4 p-4">
+            <div class="card-body">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <path
+                  d="M8.71727 30V32.3075C8.71727 32.5925 8.61727 32.8347 8.41727 33.0342C8.21699 33.2336 7.97379 33.3333 7.68768 33.3333C7.40185 33.3333 7.16018 33.2336 6.96268 33.0342C6.7649 32.8347 6.66602 32.5925 6.66602 32.3075V20.7117C6.66602 20.56 6.67463 20.4082 6.69185 20.2563C6.70879 20.1046 6.74254 19.9536 6.7931 19.8033L9.63727 11.8012C9.81449 11.2676 10.1357 10.834 10.601 10.5004C11.0663 10.1668 11.5868 10 12.1627 10H27.836C28.4118 10 28.9324 10.1668 29.3977 10.5004C29.863 10.834 30.1842 11.2676 30.3614 11.8012L33.2056 19.8033C33.2562 19.9536 33.2899 20.1046 33.3068 20.2563C33.3241 20.4082 33.3327 20.56 33.3327 20.7117V32.3075C33.3327 32.5925 33.2325 32.8347 33.0323 33.0342C32.8323 33.2336 32.5892 33.3333 32.3031 33.3333C32.0173 33.3333 31.7755 33.2336 31.5777 33.0342C31.3802 32.8347 31.2814 32.5925 31.2814 32.3075V30H8.71727ZM9.02518 18.5896H30.9735L28.7752 12.3396C28.6896 12.126 28.5613 11.9604 28.3902 11.8429C28.2193 11.7254 28.0164 11.6667 27.7814 11.6667H12.2173C11.9823 11.6667 11.7793 11.7254 11.6085 11.8429C11.4374 11.9604 11.3091 12.126 11.2235 12.3396L9.02518 18.5896ZM12.3785 26.1538C12.8971 26.1538 13.3353 25.9724 13.6931 25.6096C14.0512 25.2465 14.2302 24.8058 14.2302 24.2875C14.2302 23.7689 14.0487 23.3307 13.6856 22.9729C13.3228 22.6149 12.8821 22.4358 12.3635 22.4358C11.8452 22.4358 11.407 22.6174 11.0489 22.9804C10.6912 23.3432 10.5123 23.7839 10.5123 24.3025C10.5123 24.8208 10.6937 25.259 11.0564 25.6171C11.4195 25.9749 11.8602 26.1538 12.3785 26.1538ZM27.6352 26.1538C28.1535 26.1538 28.5917 25.9724 28.9498 25.6096C29.3075 25.2465 29.4864 24.8058 29.4864 24.2875C29.4864 23.7689 29.305 23.3307 28.9423 22.9729C28.5792 22.6149 28.1385 22.4358 27.6202 22.4358C27.1016 22.4358 26.6634 22.6174 26.3056 22.9804C25.9475 23.3432 25.7685 23.7839 25.7685 24.3025C25.7685 24.8208 25.95 25.259 26.3131 25.6171C26.6759 25.9749 27.1166 26.1538 27.6352 26.1538ZM8.33268 28.3333H31.666V20.2563H8.33268V28.3333Z"
+                  fill="#0336BA" />
+              </svg>
+              <h5 class="fw-bold">Simplicity</h5>
+              <p class="text-muted">
+                We turn complex finance into clear, easy-to-follow guidance
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- It's Not Magic Section -->
-    <section class="magic-section pt-0">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-5 mb-4 mb-lg-0">
-            <div class="badge-wrapper mb-3">
-              <span class="badge bg-primaryMagic rotate"
-                >Check Your Repayment</span
-              >
-            </div>
-            <h2 class="display-4 fw-bold check-payment">
-              It's not magic.<br />It's HSG Financial.
-            </h2>
+  <!-- Meet the Team Section -->
+  <section class="team-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="badge bg-primary rotate mb-3">Our Team</span>
+        <h2 class="display-5 fw-bold check-payment">Meet the Team</h2>
+        <p class="text-muted mx-auto check-payment-p" style="max-width: 600px">
+          Speak directly to us, just make sure to include all your contact
+          details for us to get back to you as soon as possible.
+        </p>
+      </div>
+
+      <!-- Team Spotlight -->
+      <div class="team-spotlight position-relative mb-5">
+        <div class="harman-bg-pic rounded-4 position-relative" style="min-height: 430px">
+          <!-- Background Pattern -->
+
+          <!-- Team Member Image -->
+          <div class="position-absolute bottom-0 start-50 translate-middle-x" style="z-index: 2">
+            <img src="{% static '/assest/images/image9.png' %}" alt="Harmanjpreet Singh" class="img-fluid"
+              style="max-height: 550px" />
           </div>
-          <div class="col-lg-6 offset-lg-1">
-            <p class="text-muted lead check-payment-p">
-              At HSG Financial, we understand that every financial situation is
-              unique. That's why we take a personalized approach to finding the
-              right loan for you. Our team of experienced brokers will work with
-              you to understand your needs and goals, and then shop around to
-              find the best possible loan terms. With HSG Financial, you can be
-              confident that you're getting the best possible deal on your
-              mortgage.
+
+          <!-- Floating Text Bubbles -->
+          <div class="floating-bubble bubble-left">
+            <p class="mb-0 small text-muted">
+              Committed to delivering excellence in every loan application,
+              ensuring our clients get the best possible outcome.
             </p>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Core Values Section -->
-    <section class="core-values-section e">
-      <div class="container">
-        <div class="text-center mb-5">
-          <span class="badge bg-primary mb-3 rotate">What We Stand For</span>
-          <h2 class="display-5 fw-bold check-payment">Our Core Values.</h2>
-          <p
-            class="text-muted mt-0 mx-auto check-payment-p"
-            style="max-width: 800px"
-          >
-            At HSG Financial, we offer a range of loan solutions tailored to fit
-            your unique needs. Whether you're buying a new home, refinancing, or
-            investing in property, we've got you covered.
-          </p>
-        </div>
-
-        <div class="row g-4">
-          <div class="col-md-4">
-            <div class="card value-card h-100 border rounded-4 p-4">
-              <div class="card-body">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="40"
-                  height="40"
-                  viewBox="0 0 40 40"
-                  fill="none"
-                >
-                  <path
-                    d="M10.0007 31.6656H16.1544V23.2039C16.1544 22.8225 16.2834 22.5028 16.5415 22.2447C16.7995 21.987 17.1193 21.8581 17.5007 21.8581H22.5007C22.882 21.8581 23.2018 21.987 23.4598 22.2447C23.7179 22.5028 23.8469 22.8225 23.8469 23.2039V31.6656H30.0007V17.1785C30.0007 17.0074 29.9633 16.8524 29.8886 16.7135C29.8138 16.5746 29.7123 16.4518 29.584 16.3452L20.6098 9.58224C20.4387 9.4328 20.2357 9.35807 20.0007 9.35807C19.7657 9.35807 19.5626 9.4328 19.3915 9.58224L10.4173 16.3452C10.289 16.4518 10.1875 16.5746 10.1127 16.7135C10.038 16.8524 10.0007 17.0074 10.0007 17.1785V31.6656ZM8.33398 31.6656V17.1785C8.33398 16.7521 8.4294 16.3482 8.62023 15.9668C8.81079 15.5854 9.0744 15.2714 9.41107 15.0247L18.3852 8.22974C18.855 7.87085 19.3918 7.69141 19.9957 7.69141C20.5995 7.69141 21.1397 7.87085 21.6161 8.22974L30.5902 15.0247C30.9269 15.2714 31.1905 15.5854 31.3811 15.9668C31.5719 16.3482 31.6673 16.7521 31.6673 17.1785V31.6656C31.6673 32.1122 31.5012 32.5017 31.169 32.8339C30.8368 33.1661 30.4473 33.3322 30.0007 33.3322H23.5265C23.1448 33.3322 22.8251 33.2032 22.5673 32.9452C22.3093 32.6871 22.1802 32.3674 22.1802 31.986V23.5247H17.8211V31.986C17.8211 32.3674 17.692 32.6871 17.434 32.9452C17.1762 33.2032 16.8565 33.3322 16.4748 33.3322H10.0007C9.55398 33.3322 9.16454 33.1661 8.83232 32.8339C8.5001 32.5017 8.33398 32.1122 8.33398 31.6656Z"
-                    fill="#0336BA"
-                  />
-                </svg>
-                <h5 class="fw-bold">Transparency</h5>
-                <p class="text-muted">
-                  We keep things clear, honest and upfront - no fine print or
-                  surprise
-                </p>
-              </div>
-            </div>
+          <div class="floating-bubble bubble-right">
+            <p class="mb-0 small text-muted">
+              Building long-term relationships through trust, transparency,
+              and expert financial advice for over a decade.
+            </p>
           </div>
-          <div class="col-md-4">
-            <div class="card value-card h-100 border rounded-4 p-4">
-              <div class="card-body">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="40"
-                  height="40"
-                  viewBox="0 0 40 40"
-                  fill="none"
-                >
-                  <path
-                    d="M8.71727 30V32.3075C8.71727 32.5925 8.61727 32.8347 8.41727 33.0342C8.21699 33.2336 7.97379 33.3333 7.68768 33.3333C7.40185 33.3333 7.16018 33.2336 6.96268 33.0342C6.7649 32.8347 6.66602 32.5925 6.66602 32.3075V20.7117C6.66602 20.56 6.67463 20.4082 6.69185 20.2563C6.70879 20.1046 6.74254 19.9536 6.7931 19.8033L9.63727 11.8012C9.81449 11.2676 10.1357 10.834 10.601 10.5004C11.0663 10.1668 11.5868 10 12.1627 10H27.836C28.4118 10 28.9324 10.1668 29.3977 10.5004C29.863 10.834 30.1842 11.2676 30.3614 11.8012L33.2056 19.8033C33.2562 19.9536 33.2899 20.1046 33.3068 20.2563C33.3241 20.4082 33.3327 20.56 33.3327 20.7117V32.3075C33.3327 32.5925 33.2325 32.8347 33.0323 33.0342C32.8323 33.2336 32.5892 33.3333 32.3031 33.3333C32.0173 33.3333 31.7755 33.2336 31.5777 33.0342C31.3802 32.8347 31.2814 32.5925 31.2814 32.3075V30H8.71727ZM9.02518 18.5896H30.9735L28.7752 12.3396C28.6896 12.126 28.5613 11.9604 28.3902 11.8429C28.2193 11.7254 28.0164 11.6667 27.7814 11.6667H12.2173C11.9823 11.6667 11.7793 11.7254 11.6085 11.8429C11.4374 11.9604 11.3091 12.126 11.2235 12.3396L9.02518 18.5896ZM12.3785 26.1538C12.8971 26.1538 13.3353 25.9724 13.6931 25.6096C14.0512 25.2465 14.2302 24.8058 14.2302 24.2875C14.2302 23.7689 14.0487 23.3307 13.6856 22.9729C13.3228 22.6149 12.8821 22.4358 12.3635 22.4358C11.8452 22.4358 11.407 22.6174 11.0489 22.9804C10.6912 23.3432 10.5123 23.7839 10.5123 24.3025C10.5123 24.8208 10.6937 25.259 11.0564 25.6171C11.4195 25.9749 11.8602 26.1538 12.3785 26.1538ZM27.6352 26.1538C28.1535 26.1538 28.5917 25.9724 28.9498 25.6096C29.3075 25.2465 29.4864 24.8058 29.4864 24.2875C29.4864 23.7689 29.305 23.3307 28.9423 22.9729C28.5792 22.6149 28.1385 22.4358 27.6202 22.4358C27.1016 22.4358 26.6634 22.6174 26.3056 22.9804C25.9475 23.3432 25.7685 23.7839 25.7685 24.3025C25.7685 24.8208 25.95 25.259 26.3131 25.6171C26.6759 25.9749 27.1166 26.1538 27.6352 26.1538ZM8.33268 28.3333H31.666V20.2563H8.33268V28.3333Z"
-                    fill="#0336BA"
-                  />
-                </svg>
-                <h5 class="fw-bold">Integrity</h5>
-                <p class="text-muted">
-                  Your best interest is our priority. Always.No exceptions
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card value-card h-100 border rounded-4 p-4">
-              <div class="card-body">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="40"
-                  height="40"
-                  viewBox="0 0 40 40"
-                  fill="none"
-                >
-                  <path
-                    d="M8.71727 30V32.3075C8.71727 32.5925 8.61727 32.8347 8.41727 33.0342C8.21699 33.2336 7.97379 33.3333 7.68768 33.3333C7.40185 33.3333 7.16018 33.2336 6.96268 33.0342C6.7649 32.8347 6.66602 32.5925 6.66602 32.3075V20.7117C6.66602 20.56 6.67463 20.4082 6.69185 20.2563C6.70879 20.1046 6.74254 19.9536 6.7931 19.8033L9.63727 11.8012C9.81449 11.2676 10.1357 10.834 10.601 10.5004C11.0663 10.1668 11.5868 10 12.1627 10H27.836C28.4118 10 28.9324 10.1668 29.3977 10.5004C29.863 10.834 30.1842 11.2676 30.3614 11.8012L33.2056 19.8033C33.2562 19.9536 33.2899 20.1046 33.3068 20.2563C33.3241 20.4082 33.3327 20.56 33.3327 20.7117V32.3075C33.3327 32.5925 33.2325 32.8347 33.0323 33.0342C32.8323 33.2336 32.5892 33.3333 32.3031 33.3333C32.0173 33.3333 31.7755 33.2336 31.5777 33.0342C31.3802 32.8347 31.2814 32.5925 31.2814 32.3075V30H8.71727ZM9.02518 18.5896H30.9735L28.7752 12.3396C28.6896 12.126 28.5613 11.9604 28.3902 11.8429C28.2193 11.7254 28.0164 11.6667 27.7814 11.6667H12.2173C11.9823 11.6667 11.7793 11.7254 11.6085 11.8429C11.4374 11.9604 11.3091 12.126 11.2235 12.3396L9.02518 18.5896ZM12.3785 26.1538C12.8971 26.1538 13.3353 25.9724 13.6931 25.6096C14.0512 25.2465 14.2302 24.8058 14.2302 24.2875C14.2302 23.7689 14.0487 23.3307 13.6856 22.9729C13.3228 22.6149 12.8821 22.4358 12.3635 22.4358C11.8452 22.4358 11.407 22.6174 11.0489 22.9804C10.6912 23.3432 10.5123 23.7839 10.5123 24.3025C10.5123 24.8208 10.6937 25.259 11.0564 25.6171C11.4195 25.9749 11.8602 26.1538 12.3785 26.1538ZM27.6352 26.1538C28.1535 26.1538 28.5917 25.9724 28.9498 25.6096C29.3075 25.2465 29.4864 24.8058 29.4864 24.2875C29.4864 23.7689 29.305 23.3307 28.9423 22.9729C28.5792 22.6149 28.1385 22.4358 27.6202 22.4358C27.1016 22.4358 26.6634 22.6174 26.3056 22.9804C25.9475 23.3432 25.7685 23.7839 25.7685 24.3025C25.7685 24.8208 25.95 25.259 26.3131 25.6171C26.6759 25.9749 27.1166 26.1538 27.6352 26.1538ZM8.33268 28.3333H31.666V20.2563H8.33268V28.3333Z"
-                    fill="#0336BA"
-                  />
-                </svg>
-                <h5 class="fw-bold">Simplicity</h5>
-                <p class="text-muted">
-                  We turn complex finance into clear, easy-to-follow guidance
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Meet the Team Section -->
-    <section class="team-section">
-      <div class="container">
-        <div class="text-center mb-5">
-          <span class="badge bg-primary rotate mb-3">Our Team</span>
-          <h2 class="display-5 fw-bold check-payment">Meet the Team</h2>
-          <p
-            class="text-muted mx-auto check-payment-p"
-            style="max-width: 600px"
-          >
-            Speak directly to us, just make sure to include all your contact
-            details for us to get back to you as soon as possible.
-          </p>
-        </div>
-
-        <!-- Team Spotlight -->
-        <div class="team-spotlight position-relative mb-5">
-          <div
-            class="harman-bg-pic rounded-4 position-relative"
-            style="min-height: 430px"
-          >
-            <!-- Background Pattern -->
-
-            <!-- Team Member Image -->
-            <div
-              class="position-absolute bottom-0 start-50 translate-middle-x"
-              style="z-index: 2"
-            >
-              <img
-                src="{% static '/assest/images/image9.png' %}"
-                alt="Harmanjpreet Singh"
-                class="img-fluid"
-                style="max-height: 550px"
-              />
-            </div>
-
-            <!-- Floating Text Bubbles -->
-            <div class="floating-bubble bubble-left">
-              <p class="mb-0 small text-muted">
-                Committed to delivering excellence in every loan application,
-                ensuring our clients get the best possible outcome.
-              </p>
-            </div>
-
-            <div class="floating-bubble bubble-right">
-              <p class="mb-0 small text-muted">
-                Building long-term relationships through trust, transparency,
-                and expert financial advice for over a decade.
-              </p>
-            </div>
-
-            <!-- Name Card -->
-            <div
-              class="team-name-card bg-white rounded-3 shadow-lg p-3 position-absolute"
-              style="
+          <!-- Name Card -->
+          <div class="team-name-card bg-white rounded-3 shadow-lg p-3 position-absolute" style="
                 bottom: -29px;
                 left: 50%;
                 transform: translateX(-10%);
                 z-index: 10;
-                min-width: 300px;
-              "
-            >
-              <div class="d-flex justify-content-between align-items-center">
-                <div>
-                  <h5 class="fw-bold mb-0">Harmanjpreet Singh</h5>
-                  <small class="text-muted">Lead Finance Specialist</small>
-                </div>
-                <a
-                  href="#"
-                  class="btn btn-primary rounded-circle d-flex align-items-center justify-content-center"
-                  style="width: 40px; height: 40px"
-                >
-                  <i class="bi bi-facebook text-white"></i>
+                min-width: 270px;
+              ">
+            <div class="d-flex justify-content-between gap-2 align-items-center">
+              <div>
+                <h5 class="fw-bold mb-0">Harmanjpreet Singh</h5>
+                <small class="text-muted">Lead Finance Specialist</small>
+              </div>
+              <div class="position-relative">
+                <a href="">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+                    <g clip-path="url(#clip0_347_3741)">
+                      <path
+                        d="M35 17.4977C35 7.83276 27.165 -0.00225449 17.5 -0.00225449C7.83501 -0.00225449 0 7.83276 0 17.4977C0 26.2325 6.3995 33.4723 14.7656 34.7852V22.5563H10.3223V17.4977H14.7656V13.6423C14.7656 9.25634 17.3783 6.83368 21.3756 6.83368C23.2903 6.83368 25.293 7.17548 25.293 7.17548V11.4821H23.0863C20.9123 11.4821 20.2344 12.8311 20.2344 14.215V17.4977H25.0879L24.312 22.5563H20.2344V34.7852C28.6005 33.4723 35 26.2325 35 17.4977Z"
+                        fill="#0060FF" />
+                      <path
+                        d="M24.312 22.5586L25.0879 17.5H20.2344V14.2173C20.2344 12.8333 20.9123 11.4844 23.0863 11.4844H25.293V7.17773C25.293 7.17773 23.2903 6.83593 21.3756 6.83593C17.3783 6.83593 14.7656 9.25859 14.7656 13.6445V17.5H10.3223V22.5586H14.7656V34.7874C15.6566 34.9272 16.5698 35 17.5 35C18.4302 35 19.3434 34.9272 20.2344 34.7874V22.5586H24.312Z"
+                        fill="#0336BA" fill-opacity="0.05" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_347_3741">
+                        <rect width="35" height="35" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
                 </a>
+
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- How We Work Section -->
-    <section class="how-we-work py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 mb-4 mb-lg-0">
-            <span class="badge bg-primary mb-3 rotate">Our Process</span>
-            <h2 class="display-5 fw-bold mb-3 check-payment">How We Work</h2>
-            <p class="text-muted check-payment-p" style="margin-bottom: 14px;">
-              A simple, step-by-step process to help you secure the right loan
-              with confidence.
-            </p>
-            <a href="{% url 'contact_us' %}" class="btn btn-primary btn-lg rounded-pill px-5 mb-5">Contact us →</a>
-          </div>
-
-          <div class="col-lg-8">
-            <div class="timeline">
-              <!-- Step 1 -->
-              <div class="timeline-item d-flex mb-2">
-                <div class="timeline-marker mt-1 me-3">
-                  <div class="marker-dot">
-                    <div class="marker-inner"></div>
-                  </div>
-                  <div class="marker-line"></div>
-                </div>
-                <div
-                  class="timeline-content card border rounded-4 p-4 flex-grow-1"
-                >
-                  <h5 class="fw-bold">Understand Your Needs</h5>
-                  <p class="text-muted mb-0">
-                    We start by listening — to your goals, challenges, and
-                    future plans — so we can recommend what truly fits your
-                    life, not just your paperwork.
-                  </p>
-                </div>
-              </div>
-
-              <!-- Step 2 -->
-              <div class="timeline-item d-flex mb-2">
-                <div class="timeline-marker mt-1 me-3">
-                  <div class="marker-dot opacity-25">
-                    <div class="marker-inner"></div>
-                  </div>
-                  <div class="marker-line dashed"></div>
-                </div>
-                <div
-                  class="timeline-content card border rounded-4 p-4 flex-grow-1"
-                >
-                  <h5 class="fw-bold">Compare Options & Lenders</h5>
-                  <p class="text-muted mb-0">
-                    With access to a wide network of trusted banks and lenders,
-                    we research and compare options tailored to your situation —
-                    no bias, just what works best for you.
-                  </p>
-                </div>
-              </div>
-
-              <!-- Step 3 -->
-              <div class="timeline-item d-flex">
-                <div class="timeline-marker me-3">
-                  <div class="marker-dot opacity-25">
-                    <div class="marker-inner"></div>
-                  </div>
-                </div>
-                <div
-                  class="timeline-content card border rounded-4 p-4 flex-grow-1"
-                >
-                  <h5 class="fw-bold">Secure the Right Loan — Hassle-Free</h5>
-                  <p class="text-muted mb-0">
-                    We guide you through every step of the application and
-                    approval process. From paperwork to settlement, you're
-                    supported by real people who care.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    {% include './catchup.html' %}
-
-    <footer class="footer-section ">
-      <div class="container">
-        <div
-          class="bg-dark-blue footer-section rounded-5 p-5 text-center text-white"
-        >
-          <h2 class="display-5 fw-bold mb-3">
-            Ready to Take <span class="text-primary">the Next Step?</span>
-          </h2>
-          <p class="text-white-50 mb-4">
-            Explore your options and secure the loan that's right for you, with
-            expert guidance every step of the way.
+  <!-- How We Work Section -->
+  <section class="how-we-work ">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <span class="badge bg-primary mb-3 rotate">Our Process</span>
+          <h2 class="display-5 fw-bold mb-3 check-payment">How We Work</h2>
+          <p class="text-muted check-payment-p" style="margin-bottom: 14px;">
+            A simple, step-by-step process to help you secure the right loan
+            with confidence.
           </p>
-          <a
-            href="{% url 'contact_us' %}"
-            class="btn btn-primary btn-lg rounded-pill px-5 mb-5"
-            >Book Your Free Consultation</a
-          >
+          <a href="{% url 'contact_us' %}" class="btn btn-primary btn-lg rounded-pill px-5 mb-5">Contact us →</a>
+        </div>
 
-          <div
-            class="d-flex justify-content-between align-items-center pt-4 border-0"
-          >
-            <div class="d-flex footer-social justify-content-center">
-              <a href="#" class="text-white"
-                ><i class="bi bi-youtube fs-5"></i
-              ></a>
-              <a href="#" class="text-white"
-                ><i class="bi bi-facebook fs-5"></i
-              ></a>
-              <a href="#" class="text-white"
-                ><i class="bi bi-instagram fs-5"></i
-              ></a>
-              <a href="#" class="text-white"
-                ><i class="bi bi-linkedin fs-5"></i
-              ></a>
+        <div class="col-lg-8">
+          <div class="timeline">
+            <!-- Step 1 -->
+            <div class="timeline-item d-flex mb-2">
+              <div class="timeline-marker mt-1 me-3">
+                <div class="marker-dot">
+                  <div class="marker-inner"></div>
+                </div>
+                <div class="marker-line"></div>
+              </div>
+              <div class="timeline-content card border rounded-4 p-4 flex-grow-1">
+                <h5 class="fw-bold">Understand Your Needs</h5>
+                <p class="text-muted mb-0">
+                  We start by listening — to your goals, challenges, and
+                  future plans — so we can recommend what truly fits your
+                  life, not just your paperwork.
+                </p>
+              </div>
             </div>
-            <div class="d-flex align-items-center">
-              <img src="{% static '/assest/images/Mask-group.png' %}" alt="" />
+
+            <!-- Step 2 -->
+            <div class="timeline-item d-flex mb-2">
+              <div class="timeline-marker mt-1 me-3">
+                <div class="marker-dot opacity-25">
+                  <div class="marker-inner"></div>
+                </div>
+                <div class="marker-line dashed"></div>
+              </div>
+              <div class="timeline-content card border rounded-4 p-4 flex-grow-1">
+                <h5 class="fw-bold">Compare Options & Lenders</h5>
+                <p class="text-muted mb-0">
+                  With access to a wide network of trusted banks and lenders,
+                  we research and compare options tailored to your situation —
+                  no bias, just what works best for you.
+                </p>
+              </div>
             </div>
-            <div class="d-flex gap-4 footer-links">
-              <a href="#" class="text-white text-decoration-none small"
-                >About</a
-              >
-              <a href="#" class="text-white text-decoration-none small"
-                >Calculator</a
-              >
-              <a href="#" class="text-white text-decoration-none small"
-                >Services</a
-              >
-              <a href="#" class="text-white text-decoration-none small">Blog</a>
+
+            <!-- Step 3 -->
+            <div class="timeline-item d-flex">
+              <div class="timeline-marker me-3">
+                <div class="marker-dot opacity-25">
+                  <div class="marker-inner"></div>
+                </div>
+              </div>
+              <div class="timeline-content card border rounded-4 p-4 flex-grow-1">
+                <h5 class="fw-bold">Secure the Right Loan — Hassle-Free</h5>
+                <p class="text-muted mb-0">
+                  We guide you through every step of the application and
+                  approval process. From paperwork to settlement, you're
+                  supported by real people who care.
+                </p>
+              </div>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <div
-          class="d-flex justify-content-between align-items-center small text-muted"
-        >
-          <span>© HSG Financial 2025. All Rights Reserved</span>
-          <span>Using a mortgage broker is a smart way to go</span>
+  <!-- CTA Section -->
+  {% include './catchup.html' %}
+
+  <footer class="footer-section ">
+    <div class="container">
+      <div class="bg-dark-blue footer-section rounded-5 p-5 text-center text-white">
+        <h2 class="display-5 fw-bold mb-3">
+          Ready to Take <span class="text-primary">the Next Step?</span>
+        </h2>
+        <p class="text-white-50 mb-4">
+          Explore your options and secure the loan that's right for you, with
+          expert guidance every step of the way.
+        </p>
+        <a href="{% url 'contact_us' %}" class="btn btn-primary btn-lg rounded-pill px-5 mb-5">Book Your Free
+          Consultation</a>
+
+        <div class="d-flex justify-content-between align-items-center pt-4 border-0">
+          <div class="d-flex footer-social justify-content-center">
+            <a href="#" class="text-white"><i class="bi bi-youtube fs-5"></i></a>
+            <a href="#" class="text-white"><i class="bi bi-facebook fs-5"></i></a>
+            <a href="#" class="text-white"><i class="bi bi-instagram fs-5"></i></a>
+            <a href="#" class="text-white"><i class="bi bi-linkedin fs-5"></i></a>
+          </div>
+          <div class="d-flex align-items-center">
+            <img src="{% static '/assest/images/Mask-group.png' %}" alt="" />
+          </div>
+          <div class="d-flex gap-4 footer-links">
+            <a href="#" class="text-white text-decoration-none small">About</a>
+            <a href="#" class="text-white text-decoration-none small">Calculator</a>
+            <a href="#" class="text-white text-decoration-none small">Services</a>
+            <a href="#" class="text-white text-decoration-none small">Blog</a>
+          </div>
         </div>
       </div>
-    </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="{% static '/assest/js/script.js' %}"></script>
-  </body>
+      <div class="d-flex justify-content-between align-items-center small text-muted">
+        <span>© HSG Financial 2025. All Rights Reserved</span>
+        <span>Using a mortgage broker is a smart way to go</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="{% static '/assest/js/script.js' %}"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      gsap.registerPlugin(ScrollTrigger);
+
+      let mm = gsap.matchMedia();
+
+      mm.add("(min-width: 992px)", () => {
+        // Pin left side
+        ScrollTrigger.create({
+          trigger: ".how-we-work",
+          start: "top 200px", // adjust based on navbar height
+          end: "bottom 65%",
+          pin: ".how-we-work .col-lg-4",
+          pinSpacing: false,
+          // markers: true // uncomment for debugging
+        });
+
+        // Timeline items animation
+        const items = gsap.utils.toArray(".timeline-item");
+        items.forEach((item, i) => {
+          const content = item.querySelector(".timeline-content");
+          const markerDot = item.querySelector(".marker-dot");
+
+          ScrollTrigger.create({
+            trigger: item,
+            start: "top 30%",
+            end: "bottom 30%",
+            onToggle: self => {
+              if (self.isActive) {
+                item.classList.add("active");
+                gsap.to(content, {
+                  borderColor: "#0A379E",
+                  scale: 1.02,
+                  boxShadow: "0 10px 30px rgba(10, 55, 158, 0.1)",
+                  duration: 0.3
+                });
+                if (markerDot) gsap.to(markerDot, { opacity: 1, duration: 0.3 });
+              } else {
+                item.classList.remove("active");
+                gsap.to(content, {
+                  borderColor: "#e0e0e0",
+                  scale: 1,
+                  boxShadow: "none",
+                  duration: 0.3
+                });
+                if (markerDot && i > 0) gsap.to(markerDot, { opacity: 0.25, duration: 0.3 });
+              }
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+
 </html>
