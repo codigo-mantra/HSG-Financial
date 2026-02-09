@@ -35,7 +35,7 @@ class AboutUsView(View):
 
 class IndexView(View):
     def get(self, request):
-        return render(request, "website/index.html")
+        return render(request, "website/new_index.html")
 
 
 class ServicesView(View):
