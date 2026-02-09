@@ -3722,11 +3722,11 @@ html {
 }
 
 .proses-detail-card.right-center {
-    transform: translateY(110px);
+    transform: translateY(150px);
 }
 
 .proses-detail-card.right-bottom {
-    transform: translateY(160px);
+    transform: translateY(210px);
     position: relative;
     z-index: 222;
 }
