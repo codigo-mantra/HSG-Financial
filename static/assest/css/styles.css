@@ -437,6 +437,35 @@ body {
     }
 }
 
+.underline-on-hover {
+    text-decoration: none;
+    color: var(--Blue-Primary, #0A379E) !important;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%;
+    /* 28.8px */
+}
+
+.underline-on-hover:hover {
+    color: var(--Blue-highlighed, #0060FF) !important;
+    text-align: center !important;
+    font-family: Poppins !important;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%;
+    /* 28.8px */
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+}
+
 .service-card:hover {
     transform: rotate(5deg) !important;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1) !important;
@@ -1023,6 +1052,7 @@ small {
             line-height: 160%;
             /* 28.8px */
         }
+
     }
 
 }
