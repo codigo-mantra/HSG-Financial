@@ -181,6 +181,8 @@ body {
     font-weight: 500;
     line-height: 140%;
     position: relative;
+    padding: 14px 42px;
+
     /* 33.6px */
     transition: .2s !important;
     border: none;
@@ -266,6 +268,10 @@ body {
 .calculator-card {
     background: #fff;
     border-radius: 2rem !important;
+
+    .card-body {
+        padding: 0;
+    }
 }
 
 .bg-warning {
@@ -373,10 +379,14 @@ body {
     background: #F4EFE4;
 }
 
+.btn-group .btn:active {
+    color: #211122;
+}
+
 .squiggly-line {
     margin: 1rem 0;
     top: -40px;
-    right: 0;
+    right: 24px;
 }
 
 .service-card.ew {
@@ -1016,7 +1026,7 @@ small {
 
 .guide-card {
     overflow: hidden;
-    border-radius: 20px 20px 0px 0px !important;
+    border-radius: 20px !important;
     padding: 30px 27px 0 26px !important;
 
     .card-body {
@@ -1952,7 +1962,7 @@ small {
 .blog-hero-section {
     position: relative;
     padding-top: 4rem;
-    padding-bottom: 7rem !important;
+    padding-bottom: 100px !important;
     overflow: hidden;
 }
 
@@ -1975,8 +1985,7 @@ small {
 /* Blog Grid Section */
 .blog-grid-section {
     background-color: #fafafa;
-    padding-top: 3rem;
-    padding-bottom: 5rem;
+    padding-bottom: 130px;
     margin-top: -4rem;
 }
 
@@ -1994,7 +2003,6 @@ small {
 
 .blog-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
 .blog-image-wrapper {
@@ -2027,7 +2035,7 @@ small {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 0.75rem;
+    margin-bottom: 21px;
     font-size: 0.8rem;
 }
 
@@ -2042,7 +2050,7 @@ small {
     text-decoration: none;
     font-weight: 500;
     transition: color 0.2s;
-    padding: 7px;
+    padding: 0;
 
 }
 
@@ -2076,6 +2084,7 @@ small {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    margin-bottom: 7px;
 }
 
 .blog-excerpt {
@@ -2089,8 +2098,9 @@ small {
     line-height: 22px;
     /* 157.143% */
     margin-bottom: 0;
+
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -3346,7 +3356,7 @@ html {
     color: #FFF;
     text-align: center;
     font-family: Inter;
-    font-size: 16px;
+    font-size: 16px !important;
     font-style: normal;
     font-weight: 500;
     line-height: 140%;
