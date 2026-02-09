@@ -14,10 +14,14 @@
             </button>
             <div class="collapse navbar-collapse new-nav" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item dropdown mega-menu">
-                        <a class="nav-link dropdown-toggle" href="#" role="button">
+                    <li class="nav-item d-flex align-items-center  mega-menu">
+                        <a class="nav-link " href="#" role="button">
                             Loans
                         </a>
+                       <div class="dropdown-toggle">
+
+                       </div>
+
 
                         <div class="dropdown-menu">
                             <div class="mega-menu-content">
@@ -90,13 +94,78 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'about_us' %}">About Us</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button"
-                            data-bs-toggle="dropdown">Calculators</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{% url 'loan_calculator' %}">Loan Calculator</a></li>
-                            <li><a class="dropdown-item" href="{% url 'loan_calculator' %}">Borrowing Power</a></li>
-                        </ul>
+                    <li class="nav-item d-flex align-items-center  mega-menu">
+                        <a class="nav-link " href="{% url 'loan_calculator' %}" role="button"
+                            >Calculators</a>
+
+                        <div class="dropdown-toggle"></div>
+                        <div class="dropdown-menu">
+                            <div class="mega-menu-content">
+                                <div class="mega-menu-categories">
+                                    <!-- Category 1 -->
+                                    <div class="mega-category">
+                                        <h6>Loan category 1</h6>
+                                        <ul>
+                                            <li><a href="#"><span class="loan-icon icon-blue"></span>Calculator Type 1</a>
+                                            </li>
+                                            <li><a href="#"><span class="loan-icon icon-navy"></span>Calculator Type 2</a>
+                                            </li>
+                                            <li><a href="#"><span class="loan-icon icon-teal"></span>Calculator Type 3</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Category 2 -->
+                                    <div class="mega-category">
+                                        <h6>Loan category 2</h6>
+                                        <ul>
+                                            <li><a href="#"><span class="loan-icon icon-green"></span>Calculator Type 4</a>
+                                            </li>
+                                            <li><a href="#"><span class="loan-icon icon-lime"></span>Calculator Type 5</a>
+                                            </li>
+                                            <li><a href="#"><span class="loan-icon icon-yellow"></span>Calculator Type 6</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Category 3 -->
+                                    <div class="mega-category">
+                                        <h6>Loan category 3</h6>
+                                        <ul>
+                                            <li><a href="#"><span class="loan-icon icon-orange"></span>Calculator Type 7</a>
+                                            </li>
+                                            <li><a href="#"><span class="loan-icon icon-red"></span>Calculator Type 8</a></li>
+                                            <li><a href="#"><span class="loan-icon icon-purple"></span>Calculator Type 9</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Category 4 -->
+                                    <div class="mega-category">
+                                        <h6>Loan category 4</h6>
+                                        <ul>
+                                            <li><a href="#"><span class="loan-icon icon-pink"></span>Calculator Type 10</a>
+                                            </li>
+                                            <li><a href="#"><span class="loan-icon icon-cyan"></span>Calculator Type 11</a>
+                                            </li>
+                                            <li><a href="#"><span class="loan-icon icon-indigo"></span>Calculator Type 12</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Right Side CTA -->
+                                <div class="mega-menu-cta">
+                                    <h3 class="position-absolute get-started-text" style="left: 30px;">Get started with
+                                        HSG <br> Today</h3>
+                                    <!-- You can use an image here or the CSS arrow -->
+                                    <img class="arrow-3d-css position-absolute"
+                                        src="{% static '/assest/images/arrow-img.png' %}"
+                                        alt="">
+                                    <!-- OR use an image: <img src="path-to-3d-arrow.png" alt="Get Started" class="arrow-image"> -->
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="{% url 'blogs_page' %}" role="button" data-bs-toggle="dropdown">Insights &

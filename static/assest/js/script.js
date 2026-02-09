@@ -251,14 +251,35 @@ $(document).ready(function () {
 const btn = document.getElementById('selectBtn');
 const dropdown = document.getElementById('dropdown');
 
-btn.addEventListener('click', () => {
+btn.addEventListener('click', (e) => {
+    e.stopPropagation(); // 🔥 IMPORTANT
     dropdown.classList.toggle('active');
 });
 
-document.addEventListener('click', (e) => {
-    if (!e.target.closest('.calculator-select')) {
-        dropdown.classList.remove('active');
-    }
+dropdown.addEventListener('click', (e) => {
+    e.stopPropagation(); // allow clicking inside dropdown
+});
+
+document.addEventListener('click', () => {
+    dropdown.classList.remove('active');
+});
+
+
+
+const btn1 = document.getElementById('selectBtntwo');
+const dropdown1 = document.getElementById('dropdowntwo');
+
+btn1.addEventListener('click', (e) => {
+    e.stopPropagation(); // 🔥 IMPORTANT
+    dropdown1.classList.toggle('active');
+});
+
+dropdown1.addEventListener('click', (e) => {
+    e.stopPropagation(); // allow clicking inside dropdown
+});
+
+document.addEventListener('click', () => {
+    dropdown1.classList.remove('active');
 });
 
 
@@ -289,6 +310,7 @@ new Chart(ctx, {
     },
     options: {
         responsive: true,
+        maintainAspectRatio: false,
         plugins: {
             legend: {
                 display: false
@@ -351,3 +373,53 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const searchInput = document.querySelector(
+        '.input-body-e input[type="text"]'
+    );
+    const cards = document.querySelectorAll(".Calculator-cardrs");
+
+    searchInput.addEventListener("input", function () {
+        const query = searchInput.value.toLowerCase().trim();
+
+        cards.forEach(card => {
+            const text = card.innerText.toLowerCase();
+            const col = card.closest(".col-md-4");
+
+            if (text.includes(query)) {
+                col.style.display = "block";
+            } else {
+                col.style.display = "none";
+            }
+        });
+    });
+});
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const exploreBtn = document.getElementById("explore-calculor-button");
+    const heroPic = document.getElementById("calulator-hero-pic");
+    const mainCalculators = document.querySelectorAll(".main-calulator");
+    const searchBar = document.querySelector(".serchbar");
+
+    exploreBtn.addEventListener("click", function (e) {
+        e.preventDefault(); // stop anchor jump
+
+        // hide hero image
+        heroPic.classList.add("d-none");
+
+        // show ALL calculator sections
+        mainCalculators.forEach(section => {
+            section.classList.remove("d-none");
+        });
+
+        // hide search bar
+        searchBar.classList.add("d-none");
+    });
+});

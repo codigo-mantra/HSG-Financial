@@ -3214,7 +3214,7 @@ html {
     input {
         border: none;
         background-color: transparent;
-        padding-left: 20px;
+        padding-left: 25px;
         color: #000;
         font-family: Poppins;
         font-size: 16px;
@@ -3382,18 +3382,28 @@ html {
         font-style: normal;
         font-weight: 600;
         line-height: 140%;
+        align-content: center;
         /* 22.4px */
 
-        p {
-            color: #211122;
-            text-align: center;
-            font-family: Poppins;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 140%;
-            /* 22.4px */
-        }
+
+    }
+
+    div p {
+
+        color: #5C1911;
+        text-align: right;
+        font-family: Poppins;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
+        /* 19.6px */
+        /* 22.4px */
+        border-radius: 10px;
+        border: 1px solid #D6D6D6;
+        background: #FFF;
+        padding: 6px 10px;
+
     }
 }
 
@@ -3462,8 +3472,14 @@ html {
         font-style: normal;
         font-weight: 400;
         line-height: 140%;
+        margin-bottom: 30px;
         /* 22.4px */
     }
+}
+
+.chart-wrapper {
+    height: 423px;
+    /* 👈 increase height here */
 }
 
 .saving-calculator-s {
@@ -3775,4 +3791,12 @@ html {
     left: -20%;
     z-index: 1;
     top: 38%;
+}
+
+
+
+
+
+.select-dropdown.active {
+    display: block;
 }
