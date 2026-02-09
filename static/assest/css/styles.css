@@ -679,7 +679,7 @@ small {
 
 .tag-1 {
     top: 15%;
-    right: 9%;
+    right: 7vw;
     transform: rotate(8.232deg);
 
 
@@ -687,7 +687,7 @@ small {
 
 .tag-2 {
     top: -3%;
-    left: -7%;
+    left: 1vw;
     transform: rotate(-6.135deg);
 
 
@@ -695,14 +695,14 @@ small {
 
 .tag-3 {
     top: 32%;
-    left: -13%;
+    left: -4vw;
     transform: rotate(-9.885deg);
 
 }
 
 .tag-4 {
     bottom: 13%;
-    right: 5%;
+    right: 7vw;
     transform: rotate(12.071deg);
 
 }
