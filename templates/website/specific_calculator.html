@@ -443,15 +443,16 @@
                 // Pin left side
                 ScrollTrigger.create({
                     trigger: ".how-we-work",
-                    start: "top 200px", // adjust based on navbar height
+                    start: "top 200px",
                     end: "bottom 730px",
                     pin: ".how-we-work .col-lg-4",
                     pinSpacing: false,
-                    // markers: true // uncomment for debugging
                 });
 
                 // Timeline items animation
                 const items = gsap.utils.toArray(".timeline-item");
+                const lastIndex = items.length - 1;
+
                 items.forEach((item, i) => {
                     const content = item.querySelector(".timeline-content");
                     const markerDot = item.querySelector(".marker-dot");
@@ -469,7 +470,17 @@
                                     boxShadow: "0 10px 30px rgba(10, 55, 158, 0.1)",
                                     duration: 0.3
                                 });
+
                                 if (markerDot) gsap.to(markerDot, { opacity: 1, duration: 0.3 });
+
+                                // If last item becomes active, hide ALL marker-lines
+                                if (i === lastIndex) {
+                                    items.forEach((otherItem) => {
+                                        const line = otherItem.querySelector(".marker-line");
+                                        if (line) gsap.to(line, { opacity: 0, duration: 0.3 });
+                                    });
+                                }
+
                             } else {
                                 item.classList.remove("active");
                                 gsap.to(content, {
@@ -478,7 +489,16 @@
                                     boxShadow: "none",
                                     duration: 0.3
                                 });
-                                if (markerDot && i > 0) gsap.to(markerDot, { opacity: 0.25, duration: 0.3 });
+
+                                // Restore ALL marker-lines when leaving the last item
+                                if (i === lastIndex) {
+                                    items.forEach((otherItem) => {
+                                        const line = otherItem.querySelector(".marker-line");
+                                        if (line) gsap.to(line, { opacity: 1, duration: 0.3 });
+                                    });
+                                } else {
+                                    if (markerDot && i > 0) gsap.to(markerDot, { opacity: 0.25, duration: 0.3 });
+                                }
                             }
                         }
                     });
