@@ -1718,7 +1718,7 @@ small {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='16' viewBox='0 0 14 16'%3E%3Cpath d='M7 0C7 0 7.38623 4.11995 8.89064 5.83927C10.395 7.5586 14 8 14 8C14 8 10.395 8.4414 8.89064 10.1607C7.38623 11.88 7 16 7 16C7 16 6.61377 11.88 5.10936 10.1607C3.60496 8.4414 0 8 0 8C0 8 3.60496 7.5586 5.10936 5.83927C6.61377 4.11995 7 0 7 0Z' fill='%238ACB00'/%3E%3C/svg%3E") !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
-    background-size: contain !important;
+    /* background-size: contain 16px !important; */
 }
 
 /* Icon Colors - Various shades */
