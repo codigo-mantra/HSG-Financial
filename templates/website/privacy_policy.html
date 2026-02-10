@@ -2,19 +2,402 @@
 <html lang="en">
 {%load static %}
 
-{% include './navbar.html' %}
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HSG Financial Services - Estimate Your Borrowing Power</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Slick Slider -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link href="{% static '/assest/css/styles.css' %}" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
+    <style>
+        .footer-section {
+            padding-top: 10px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    {% include './navbar.html' %}
+
+    <div class="container position-relative" style="padding-top: 60px;">
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-10">
+                <span class="badge bg-primary mb-3 px-3 rotate py-2">Calculators</span>
+                <h1 class="display-4 fw-bold blog-tital mb-2">PRIVACY DISCLOSURE AND <span
+                        style="color: #0A379E;">CONSENT</span></h1>
+                <p class="lead text-muted blog-para mb-4">At HSG Financial, we value your privacy and are committed to
+                    protecting your personal information. This Privacy Disclosure explains how we collect, use, and
+                    safeguard your data.</p>
+
+            </div>
+        </div>
+    </div>
+    <section class="privacy-policy " style="padding-top: 100px; padding-bottom: 130px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="d-flex   flex-column" style="gap: 23px;">
+
+                        <div class="table-of-content-line">
+                            <h5 class="pb-0  " style="margin-bottom: 11px;">Table of content</h5>
+                            <a href="#privacy-statement">Privacy Statement</a>
+                            <a href="#how-collected-from-you">How information is collected from you</a>
+                            <a href="#how-collected-other-sources">How information is collected from other sources</a>
+                            <a href="#law-authorises-collection">When the law authorises or requires collection of
+                                information</a>
+                            <a href="#not-providing-info">What happens if you do not provide information?</a>
+                            <a href="#sharing-info-general">Sharing Your Information - General</a>
+                            <a href="#sharing-representatives">Sharing with your representatives and referees</a>
+                            <a href="#sharing-third-parties">Sharing with third parties</a>
+                            <a href="#sharing-outside-australia">Sharing outside of Australia</a>
+                            <a href="#info-other-people">Information about other people</a>
+                            <a href="#feedback-handling">Feedback on the handling of your personal information</a>
+                            <a href="#privacy-policy-full">Privacy Policy</a>
+                            <a href="#consent-marketing">Consent to receive marketing information</a>
+                            <a href="#consent-related-parties">Consent to deal with related parties on your behalf</a>
+                            <a href="#consent-electronic">Consent to receive documents electronically</a>
+                            <a href="#consent-recording">Consent to being recorded by video or audio conferencing</a>
+                            <a href="#consent-credit-info">Consent to obtain credit information</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9 ps-lg-4">
+                    <div class="d-flex flex-column" style="gap: 20px;">
+                        <div id="privacy-statement" class="d-flex privecy-ans   flex-column" style="gap: 14px;">
+                            <h5 class="pb-0 mb-0 ">Privacy Statement</h5>
+                            <p class="pb-0 mb-0">We need to collect personal information about you to provide you with
+                                our broking and related credit services. This privacy statement tells you how we collect
+                                your information, what we use the information for and with whom we share the
+                                information. If we collect information that can be used to identify you, we will take
+                                reasonable steps to notify you of that collection. In certain circumstances, we may also
+                                be required to collect sensitive information (such as health information) on behalf of
+                                the lender in the course of giving you credit assistance.</p>
+                        </div>
+                        <div id="how-collected-from-you" class="d-flex privecy-ans   flex-column" style="gap: 14px;">
+                            <h5 class="pb-0 mb-0 ">How information is collected from you</h5>
+                            <p class="pb-0 mb-0">We will collect your information from you directly whenever we can,
+                                like from enquiries we make of you when you seek credit assistance from us. We may
+                                verify that information from sources referred to in the responses to those enquiries or
+                                in this privacy statement.</p>
+                        </div>
+                        <div id="how-collected-other-sources" class="d-flex privecy-ans   flex-column"
+                            style="gap: 14px;">
+                            <h5 class="pb-0 mb-0 ">How information is collected from other sources</h5>
+                            <p class="pb-0 mb-0">Sometimes we will collect information about you from other sources as
+                                the Privacy Act 1988 permits. <br> <br>
+                                We will do this only if it is reasonably necessary to do so, for
+                                example, where:</p>
+
+                            <ul>
+                                <li>we collect information from third parties about a loan or lease in relation to which
+                                    you seek our services,</li>
+                                <li>we cannot get hold of you and we rely on public information to update your contact
+                                    details,or</li>
+                                <li>we exchange information with your legal or financial adviser or other
+                                    representatives.</li>
+                            </ul>
+
+                        </div>
+                        <div id="law-authorises-collection" class="d-flex privecy-ans   flex-column" style="gap: 14px;">
+                            <h5 class="pb-0 mb-0 ">When the law authorises or requires collection of information</h5>
+                            <div>
+                                <p>We may use your information for purposes including:</p>
+                                <ul>
+                                    <li>giving you Credit Assistance,</li>
+                                    <li>giving you information about loan products or related services,</li>
+                                    <li>considering whether you are eligible for a loan or lease or any related service
+                                        you requested,</li>
+                                    <li>assisting you to prepare an application for a lease or a loan,</li>
+                                    <li>administering services we provide, for example, to answer requests or deal with
+                                        complaints, identifying you,</li>
+                                    <li>telling you about other products or services we make available and that may be
+                                        of interest to you, unless you tell us not to,</li>
+                                    <li>telling you about other suppliers, with whom we have arrangements, that supply
+                                        goods or services that may be of interest to you,</li>
+                                    <li>allowing us to run our business efficiently and perform general administrative
+                                        tasks,</li>
+                                    <li>preventing or investigating any fraud or crime or any suspected fraud or crime,
+                                        as required by law, regulation or codes binding us, and any purpose to which you
+                                        have consented.</li>
+                                    <p>You can let us know at any time if you no longer wish to receive direct marketing
+                                        offers from us. We will process your request as soon as practicable.</p>
+                                </ul>
+                            </div>
+
+
+                        </div>
+                        <div id="not-providing-info" class="d-flex privecy-ans   flex-column" style="gap: 14px;">
+                            <h5 class="pb-0 mb-0 ">What happens if you do not provide information?</h5>
+                            <div class="">
+                                <p>If you do not provide your information to us, it may not be possible to:</p>
+                                <ul>
+                                    <li>assist in finding a loan or lease relevant to your circumstances,</li>
+                                    <li>verify your identity or protect against fraud, or</li>
+                                    <li>let you know about products or services that might be suitable for your
+                                        financial needs.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="sharing-info-general" class="d-flex privecy-ans   flex-column" style="gap: 14px;">
+                            <h5 class="pb-0 mb-0 ">Sharing Your Information - General</h5>
+                            <p>We may use and share your information with other organisations for any purpose described
+                                above.</p>
+                        </div>
+                        <div id="sharing-representatives" class="d-flex privecy-ans   flex-column" style="gap: 14px;">
+                            <h5 class="pb-0 mb-0 ">Sharing with your representatives and referees</h5>
+                            <div class="">
+                                <p>We may share your information with:</p>
+                                <ul>
+                                    <li>your representative or any person acting on your behalf (for example, lawyers,
+                                        settlement agents accountants, or real estate agents), and</li>
+                                    <li>your referees, like your employer, to confirm details about you.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div id="sharing-third-parties" class="d-flex privecy-ans   flex-column" style="gap: 14px;">
+                            <h5 class="pb-0 mb-0 ">Sharing with third parties</h5>
+                            <div class="">
+                                <p>We may share your information with third parties in relation to services we provide
+                                    to you or goods or services in which we reasonably consider you may be interested.
+                                    Those third parties may include:</p>
+                                <ul>
+                                    <li>The broker group through which we may submit loan or lease applications to
+                                        lenders or lessors on the broker group’s panel. You can view our broker group’s
+                                        privacy notice by clicking HERE. It sets out how that broker group manages your
+                                        personal information and where you can find its privacy policy,</li>
+                                    <li>organisations which provide other products or services to you or to whom an
+                                        application or referral has been made for those products and services,</li>
+                                    <li>our Licensee,</li>
+                                    <li>referrers that referred your business to us,</li>
+                                    <li>financial services suppliers with whom we have arrangements, valuers, lenders,
+                                        lessors, lender’s mortgage insurers and other loan or lease intermediaries,
+                                        organisations, like fraud reporting agencies, that may identify, investigate
+                                        and/or prevent fraud, suspected fraud, crimes, suspected crimes, or other
+                                        misconduct</li>
+                                    <li>Government or regulatory bodies as required or authorised by law. In some
+                                        instances, these bodies may share the information with relevant foreign
+                                        authorities,</li>
+                                    <li>guarantors and prospective guarantors of your loan or lease,</li>
+                                    <li>service providers, agents, contractors, and advisers that assist us to conduct
+                                        our business for purposes including, without limitation, storing or analysing
+                                        information, mentoring and training as applicable,</li>
+                                    <li>any organisation that wishes to take an interest in our business or assets, and
+                                    </li>
+                                    <li>any third party to which you consent to us sharing your information.</li>
+                                    <li>Australian Finance Group Ltd (AFG), each subsidiary of AFG, the Appointed Credit
+                                        Service Provider and their organisation and any assignees or transferees of the
+                                        commission relating to any credit provided to me arranged by the Appointed
+                                        Credit Service Provider or their organisation.</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="sharing-outside-australia" class="d-flex privecy-ans   flex-column" style="gap: 14px;">
+                            <h5 class="pb-0 mb-0 ">Sharing outside of Australia</h5>
+                            <p>From time to time, we may use approved overseas organisations or service providers to
+                                help conduct our business. As a result, we may need to share some of your information
+                                (including credit information) with such organisations outside Australia. These
+                                organisations have an Offshoring Security Requirements approval in writing with both the
+                                Mortgage Australia Group and/or the Australian Finance Group. <br>We may store your
+                                information in cloud or other types of networked or electronic storage. As electronic or
+                                networked storage can be accessed from various countries via an internet connection,
+                                it’s not always practicable to know in which country your information may be held. If
+                                your information is stored in this way, disclosures may occur in countries other than
+                                those listed.
+                                Overseas organisations may be required to disclose information we share with them under
+                                a foreign law. In those instances, we will not be responsible for that disclosure. </p>
+                        </div>
+                        <div id="info-other-people" class="d-flex privecy-ans   flex-column" style="gap: 14px;">
+                            <h5 class="pb-0 mb-0 ">Information about other people</h5>
+                            <div class="">
+                                <p>If you give information to us about another person (like your co-applicant) in
+                                    relation
+                                    to the services we provide, you will let that other person know that: <br>we have
+                                    collected their information to provide those services or for any other purpose set
+                                    out
+                                    in this privacy notice, <br>we may exchange this information with other
+                                    organisations set out in this privacy notice, we handle their personal information
+                                    in the way set out in our Privacy Policy and this privacy notice and they can: </p>
+                                <ul>
+                                    <li>access or request a copy of that privacy policy or this privacy statement, or
+                                    </li>
+                                    <li>access the information we hold about that other person,</li>
+                                    <li>by using our contact details above, and</li>
+                                    <li>we may not be able to provide those services to you unless we obtain their
+                                        information.</li>
+                                </ul>
+                            </div>
+
+
+                        </div>
+                        <div id="feedback-handling" class="d-flex privecy-ans   flex-column" style="gap: 14px;">
+                            <h5 class="pb-0 mb-0 ">Feedback on the handling of your personal information</h5>
+                            <div class="">
+                                <p>Should you be dissatisfied with the manner in which the Credit Representative has
+                                    handled your personal information, please contact us on the details listed above. We
+                                    will take all necessary steps to investigate and address your concerns. If the issue
+                                    you have raised is not resolved to your satisfaction, you should contact the Office
+                                    of the Australian Information Commissioner at :</p>
+                                <p>Telephone: <span style="font-weight: 700;">1300 363 992</span></p>
+                                <p>email: <span style="font-weight: 700;">enquiries@oaic.gov.au</span></p>
+                                <p class="d-flex">Mail address: <span style="font-weight: 700;">GPO Box 5218,
+                                        SYDNEY, NSW 2001</span></p>
+                                You can obtain a copy of our full Privacy Policy by contacting us using the details
+                                above. You can learn more about the Privacy Act and your rights at
+                                <a style=" opacity: 0.8;
+            color: #0060FF;
+            font-family: Poppins;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 180%;
+            text-decoration-line: underline;
+            text-decoration-style: solid;
+            text-decoration-skip-ink: auto;
+            text-decoration-thickness: auto;
+            text-underline-offset: auto;
+            text-underline-position: from-font;" href="http://www.privacy.gov.au">http://www.privacy.gov.au</a>
+                            </div>
+                        </div>
+                        <div id="privacy-policy-full" class="d-flex privecy-ans   flex-column" style="gap: 14px;">
+                            <h5 class="pb-0 mb-0 ">Privacy Policy</h5>
+                            <p>You can find out more about how we manage your information by reading our Privacy Policy
+                                available by contacting us. Please see our contact details above. Also, you can read and
+                                obtain a copy of our Privacy Policy at the website address set out above. Our Privacy
+                                Policy sets out how you can ask us to access and seek to correct information we hold
+                                about you and how you may complain against us about a privacy issue. <br> By doing
+                                business with us you agree that we may collect, use and disclose your information as
+                                specified unless you have explicitly withdrawn your consent</p>
+                        </div>
+                        <div id="consent-marketing" class="d-flex privecy-ans   flex-column" style="gap: 14px;">
+                            <h5 class="pb-0 mb-0 ">Consent to receive marketing information</h5>
+                            <p>You consent to us doing so and we may periodically provide you with information about new
+                                products and services available from us or from other businesses with whom we have a
+                                relationship. Your consent to our providing this information to you will be implied
+                                unless you notify us that you do not wish to receive this information.</p>
+
+                        </div>
+                        <div id="consent-related-parties" class="d-flex privecy-ans   flex-column" style="gap: 14px;">
+                            <h5 class="pb-0 mb-0 ">Consent to deal with related parties on your behalf</h5>
+                            <p>You hereby authorise us to receive information from any lender about your credit affairs,
+                                and to provide any relevant real estate agent, lawyer, conveyancer, agent or person
+                                authorised by you to access your information, with details of whether finance has been
+                                approved for you, and if it has, the terms of that approval, including providing a copy
+                                of any approval letter.</p>
+
+                        </div>
+                        <div id="consent-electronic" class="d-flex privecy-ans   flex-column" style="gap: 14px;">
+                            <h5 class="pb-0 mb-0 ">Consent to receive documents electronically</h5>
+                            <p>You consent to us providing you with documents by electronic communication, you confirm
+                                that paper documents may no longer be given and electronic communications must be
+                                regularly checked for documents. Consent to the giving of documents by electronic
+                                communication may be withdrawn at any time.</p>
+
+                        </div>
+                        <div id="consent-recording" class="d-flex privecy-ans   flex-column" style="gap: 14px;">
+                            <h5 class="pb-0 mb-0 ">Consent to being recorded by video or audio conferencing</h5>
+                            <p>You consent to us obtaining personal information, financial
+                                information and credit information about you by video or audio conferencing for the
+                                purpose of arranging credit, providing credit assistance and give your permission for
+                                that video or audio conference to be recorded for this purpose.</p>
+
+                        </div>
+                        <div id="consent-credit-info" class="d-flex privecy-ans   flex-column" style="gap: 14px;">
+                            <h5 class="pb-0 mb-0 ">Consent to obtain credit information</h5>
+                            <p>You consent to us obtaining your credit information (including both consumer and
+                                commercial credit reporting and eligibility information) from a credit reporting body on
+                                your behalf. We are authorised to use that information to assist us to provide services,
+                                including credit assistance, to you and to assist you to apply for credit.</p>
+                            <p>By doing business with us, including providing us further information or correspondence
+                                after receiving this document, you agree that we may collect, use and disclose your
+                                information as specified unless you have explicitly withdrawn your consent.</p>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 
 
 
+    {% include './catchup.html' %}
 
 
 
+    {% include './footer.html' %}
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="{% static '/assest/js/script.js' %}"></script>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
+            const toc = document.querySelector(".table-of-content-line");
 
+            if (toc) {
+                ScrollTrigger.create({
+                    trigger: toc,
+                    start: "top 11%",
+                    endTrigger: ".privacy-policy",
+                    end: "bottom 120%",
+                    pin: true,
+                    pinSpacing: false,
+                });
 
+                // Smooth scroll for TOC links
+                // const links = toc.querySelectorAll("a");
+                // links.forEach(link => {
+                //     link.addEventListener("click", (e) => {
+                //         e.preventDefault();
+                //         const targetId = link.getAttribute("href");
+                //         gsap.to(window, {
+                //             duration: 1,
+                //             scrollTo: {
+                //                 y: targetId,
+                //                 offsetY: 100
+                //             },
+                //             ease: "power2.inOut"
+                //         });
+                //     });
+                // });
+            }
+        });
 
+        document.addEventListener('DOMContentLoaded', () => {
+            const links = document.querySelectorAll('a[href^="#"]');
 
-{% include './catchup.html' %}
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    // remove active from all
+                    links.forEach(l => l.classList.remove('active'));
+
+                    // add active to clicked
+                    link.classList.add('active');
+                });
+            });
+        });
+
+    </script>
+</body>
