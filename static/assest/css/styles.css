@@ -207,8 +207,8 @@ body {
 }
 
 .btn-primary:hover {
-    border-radius: 60px;
-    background: #00163B;
+    border-radius: 60px !important;
+    background: #00163B !important;
     box-shadow: 6px 0 3px 0 #0B295B inset;
 
 }
