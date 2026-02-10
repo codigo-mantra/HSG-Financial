@@ -1,98 +1,99 @@
 {% extends "./base.html" %}
-{% load static  %}
+{% load static %}
 
-  {% block extra_css %}
+{% block extra_css %}
 
-    <style>
-        .footer-section{
-            padding-top:10px;
-        }
-    </style>
-   {% endblock %}
+<style>
+    .footer-section {
+        padding-top: 10px;
+    }
+</style>
+{% endblock %}
 
-{% block title %} Blogs | Details {% endblock title %} 
+{% block title %} Blogs | Details {% endblock title %}
 
 {% block main_content %}
 
- <!-- Article Hero Section -->
-    <section class="article-hero py-5">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-11 text-center">
-                    <!-- Meta Info -->
-                    <div class="article-meta mb-3 d-flex justify-content-around align-items-center gap-3">
-                        <a href="#" class="article-category">{{blog.category}} </a>
-                        <span class="article-read-time text-muted">{{blog.reading_time}}  mins read</span>
-                    </div>
+<!-- Article Hero Section -->
+<section class="article-hero py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-11 text-center">
+                <!-- Meta Info -->
+                <div class="article-meta mb-3 d-flex justify-content-around align-items-center gap-3">
+                    <a href="#" class="article-category">{{blog.category}} </a>
+                    <span class="article-read-time text-muted">{{blog.reading_time}} mins read</span>
+                </div>
 
-                    <!-- Title -->
-                    <h1 class="article-title display-5  fw-bold mb-1">{{blog.title}} .</h1>
+                <!-- Title -->
+                <h1 class="article-title display-5  fw-bold mb-1">{{blog.title}} .</h1>
 
-                    <!-- Author -->
-                    <p class="article-author text-muted mb-4">Written By :{{blog.author.full_name}} </p>
+                <!-- Author -->
+                <p class="article-author text-muted mb-4">Written By :{{blog.author.full_name}} </p>
 
-                    <!-- Featured Image -->
-                    <div class="article-featured-image rounded-4 overflow-hidden shadow-sm">
-                        <img style="max-height: 450px; object-fit: cover;" src="{{blog.thumbnail.url}}"
-                            alt="Article featured image" class="img-fluid w-100">
-                    </div>
+                <!-- Featured Image -->
+                <div class="article-featured-image rounded-4 overflow-hidden shadow-sm">
+                    <img style="max-height: 450px; object-fit: cover;" src="{{blog.thumbnail.url}}"
+                        alt="Article featured image" class="img-fluid w-100">
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Article Content Section -->
-    <section class="article-content-section pb-5">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-11">
-                    <article class="article-body">
-                        {{blog.content|safe}}
-                    </article>
-                </div>
+<!-- Article Content Section -->
+<section class="article-content-section pb-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-11">
+                <article class="article-body">
+                    {{blog.content|safe}}
+                </article>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Related Articles Section -->
-    <section class="related-articles-section pb-5">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-12">
-                    <span class="badge bg-primary mb-3 rotate">Related Blogs</span>
-                    <h2 class="display-5 fw-bold other-articles mb-4">Other Articles</h2>
+<!-- Related Articles Section -->
+<section class="related-articles-section pb-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <span class="badge bg-primary mb-3 rotate">Related Blogs</span>
+                <h2 class="display-5 fw-bold other-articles mb-4">Other Articles</h2>
 
-                    <div class="row g-4">
-                        {% for blog in related_blogs %}
-                            <!-- Related Article  -->
-                            <div class="col-md-4">
-                                <article class="blog-card">
-                                    <div class="blog-image-wrapper">
-                                        <img src="{{blog.thumbnail.url}}?w=600&h=400&fit=crop"
-                                            alt="Money" class="blog-image">
+                <div class="row g-4">
+                    {% for blog in related_blogs %}
+                    <!-- Related Article  -->
+                    <div class="col-md-4">
+                        <a href="{% url 'blog_detail' blog.slug %}" class="blog-category details">
+                            <article class="blog-card">
+                                <div class="blog-image-wrapper">
+                                    <img src="{{blog.thumbnail.url}}?w=600&h=400&fit=crop" alt="Money"
+                                        class="blog-image">
+                                </div>
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">{{blog.category}} </p>
+                                        <span class="blog-read-time">{{blog.reading_time}} mins read</span>
                                     </div>
-                                    <div class="blog-content">
-                                        <div class="blog-meta">
-                                            <a href="{% url 'blog_detail' blog.slug %}" class="blog-category">{{blog.category}} </a>
-                                            <span class="blog-read-time">{{blog.reading_time}} mins read</span>
-                                        </div>
-                                        <h3 class="blog-title">{{blog.title}} </h3>
-                                        <p class="blog-excerpt">{{blog.short_decription}} ...</p>
-                                    </div>
-                                </article>
-                            </div>
-                        {% endfor %}
-                        
+                                    <h3 class="blog-title">{{blog.title}} </h3>
+                                    <p class="blog-excerpt">{{blog.short_decription}} ...</p>
+                                </div>
+                            </article>
+                        </a>
                     </div>
+                    {% endfor %}
+
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Info Split Section -->
-    {% include './catchup.html' %}
+<!-- Info Split Section -->
+{% include './catchup.html' %}
 
 
 
 {% endblock main_content %}
-
