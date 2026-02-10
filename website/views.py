@@ -46,6 +46,14 @@ class LoanCalculatorView(View):
     def get(self, request):
         return render(request, "website/Calculator.html")
 
+class PrivacyPolicyView(View):
+    def get(self, request):
+        return render(request, "website/privacy_policy.html")
+
+class SpecificCalculatorView(View):
+    def get(self, request):
+        return render(request, "website/specific_calculator.html")
+
 
 class BlogPageView(ListView):
     model = Blog

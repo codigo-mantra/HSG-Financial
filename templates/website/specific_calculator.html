@@ -24,7 +24,7 @@
     </div>
     {% include './navbar.html' %}
 
-    <section class=" bg-lines-design pt-5 position-relative" style="padding-bottom: 54px;">
+    <section class=" bg-lines-design pt-5 position-relative" style="padding-bottom: 100px;">
         <!-- <div class="hero-bg-pattern"></div> -->
         <div class="w-100 overflow-hidden hero-section-lines d-flex align-items-center justify-content-center">
 
@@ -49,18 +49,9 @@
         </div>
     </section>
 
-    <section id="calulator-hero-pic">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <img class=" object-fit-cover w-100" src="{% static '/assest/images/calculatorhero.png' %}" alt="">
-                </div>
-            </div>
-        </div>
 
-    </section>
 
-    <section class="mb-5 position-relative d-none main-calulator" style="z-index: 222;">
+    <section class="mb-5 position-relative  main-calulator" style="z-index: 222;">
         <div class="container">
             <div class="col-lg-12">
                 <div class="d-flex justify-content-between">
@@ -115,7 +106,80 @@
 
             </div>
     </section>
+    <section class=" position-relative  main-calulator" style="z-index: 22;">
+        <div class="container border-an-gap-bg">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="">
+                        <div class="save-calculate-n-p">
+                            <h3>Saving Calculator</h3>
+                            <p>Enter your saving details. at it is pozement</p>
+                        </div>
 
+                        <div class="">
+                            <ul class="list-unstyled amount-list-style">
+                                <li>
+                                    <div class="w-100 d-flex justify-content-between align-items-center">
+                                        <h5 class="mb-0">Initial Amount</h5>
+                                        <p class="mb-0">$5,000</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="w-100 d-flex justify-content-between">
+                                        <h5 class="mb-0">Regular Deposit</h5>
+                                        <p class="mb-0">$100</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="w-100 d-flex justify-content-between">
+                                        <h5 class="mb-0">Regular Deposit</h5>
+                                        <p class="mb-0">Monthly v</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="w-100 d-flex justify-content-between">
+                                        <h5 class="mb-0">Interest Rate</h5>
+                                        <p class="mb-0">2.5% v</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="w-100 d-flex justify-content-between">
+                                        <h5 class="mb-0">Saving Term</h5>
+                                        <p class="mb-0">10 Years v</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="mt-5 d-flex align-items-center gap-3">
+                                <a href="#"
+                                    class=" w-100 btn btn-primary btn-lg blog-btn-red rounded-pill px-5">Calculate your
+                                    savings</a>
+                                <button class="reset-button">
+                                    Reset
+
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="">
+                        <div class="chart-wrapper er">
+                            <canvas class="bg-custom-color" id="stackedChart"></canvas>
+
+                            <div class="mt-3">
+                                <p class="graph-note"><span> Note:</span> The information provided by the calculator is
+                                    intended to
+                                    provide illustrative
+                                    examples based on stated assumptions and your inputs. Calculations are meant as
+                                    estimates only and it is advised that you consult with a mortgage broker about your
+                                    specific circumstances. Financial Calculators © VisionAbacus Pty Ltd 2025</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="mt-1" id="calculator-card-section">
         <div class="container">
             <div class="row">
@@ -129,7 +193,7 @@
             </div>
         </div>
     </section>
-    <section class="serchbar">
+    <section class="serchbar d-none">
         <div class="container">
             <div class="row">
                 <div class="col-lg-9 mx-auto">
@@ -204,7 +268,7 @@
                         <div class="d-flex gap-1  flex-column">
                             <h5>Split Loan Calculator</h5>
                             <p>Work out the costs of splitting your loan into a fixed and variable loan.</p>
-                            <a href="{% url 'specific_calculator' %}">View Now</a>
+                            <a href="" id="explore-calculor-button">View Now</a>
 
                         </div>
 
@@ -217,7 +281,7 @@
                             <h5>Mortgage Switching
                                 Calculator</h5>
                             <p>See what it costs to move your loan to a new lender.</p>
-                            <a href="{% url 'specific_calculator' %}">View Now</a>
+                            <a href="">View Now</a>
 
                         </div>
 
@@ -229,7 +293,7 @@
                         <div class="d-flex gap-1  flex-column">
                             <h5>Borrowing Power Calculator</h5>
                             <p>Use your details to estimate how much you could borrow.</p>
-                            <a href="{% url 'specific_calculator' %}">View Now</a>
+                            <a href="">View Now</a>
 
                         </div>
 
@@ -241,7 +305,7 @@
                         <div class="d-flex gap-1  flex-column">
                             <h5>Comparison Rate Calculator</h5>
                             <p>Use interest rates and fees to compare trues costs of different loans.</p>
-                            <a href="{% url 'specific_calculator' %}">View Now</a>
+                            <a href="">View Now</a>
 
                         </div>
 
@@ -253,7 +317,7 @@
                         <div class="d-flex gap-1  flex-column">
                             <h5>Split Loan Calculator</h5>
                             <p>Work out the costs of splitting your loan into a fixed and variable loan.</p>
-                            <a href="{% url 'specific_calculator' %}">View Now</a>
+                            <a href="">View Now</a>
 
                         </div>
 
@@ -266,7 +330,7 @@
                             <h5>Income Annualisation Calculator</h5>
                             <p>Work out your annual income from the
                                 money you’ve received so far this year.</p>
-                            <a href="{% url 'specific_calculator' %}">View Now</a>
+                            <a href="">View Now</a>
 
                         </div>
 
@@ -277,7 +341,7 @@
 
         </div>
         <div class="d-flex justify-content-center">
-            <a href="{% url 'loan_calculator' %}" class="view-all-button text-decoration-none border-0">View More</a>
+            <button class="view-all-button border-0">View More</button>
         </div>
 
     </section>
