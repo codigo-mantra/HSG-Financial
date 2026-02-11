@@ -1352,6 +1352,7 @@ small {
 
 .team-name-card {
     border-radius: 1rem !important;
+    min-width: 288px !important;
 }
 
 .bg-primary-light {
@@ -1401,6 +1402,17 @@ small {
 
 .opacity-0 {
     opacity: 0;
+}
+
+.new-text-of {
+    color: #333;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    /* 22.4px */
+    opacity: 0.6;
 }
 
 .opacity-0 {
@@ -4055,6 +4067,10 @@ html {
     flex-wrap: wrap;
     row-gap: 20px;
     padding: 10px;
+
+    img {
+        transform: translateX(30px);
+    }
 }
 
 .blur-curcal section {
