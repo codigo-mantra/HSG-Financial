@@ -356,7 +356,12 @@
 
             const toc = document.querySelector(".table-of-content-line");
 
-            if (toc) {
+            if (!toc) return;
+
+            let mm = gsap.matchMedia();
+
+            mm.add("(min-width: 992px)", () => {
+
                 ScrollTrigger.create({
                     trigger: toc,
                     start: "top 11%",
@@ -366,24 +371,10 @@
                     pinSpacing: false,
                 });
 
-                // Smooth scroll for TOC links
-                // const links = toc.querySelectorAll("a");
-                // links.forEach(link => {
-                //     link.addEventListener("click", (e) => {
-                //         e.preventDefault();
-                //         const targetId = link.getAttribute("href");
-                //         gsap.to(window, {
-                //             duration: 1,
-                //             scrollTo: {
-                //                 y: targetId,
-                //                 offsetY: 100
-                //             },
-                //             ease: "power2.inOut"
-                //         });
-                //     });
-                // });
-            }
+            });
+
         });
+
 
         document.addEventListener('DOMContentLoaded', () => {
             const links = document.querySelectorAll('a[href^="#"]');

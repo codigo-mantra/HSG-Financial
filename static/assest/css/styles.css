@@ -915,6 +915,8 @@ small {
             rgba(19, 31, 43, 0.00) -22.34%,
             rgba(19, 31, 43, 0.90) 100%),
         url(../images/girlandboy.png)lightgray 0.094px -0.531px / 100.012% 126.643% no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .testimonial-card {
@@ -1648,13 +1650,23 @@ small {
         height: 300px !important;
     }
 
-    .floating-bubble {
-        display: none;
+
+    .floating-bubble.bubble-left {
+        left: 0 !important;
+        top: -14px;
+    }
+
+    .floating-bubble.bubble-right {
+        right: 0 !important;
+        top: 85px;
     }
 
     .team-name-card {
         min-width: 250px !important;
         width: 90%;
+        bottom: -118px !important;
+        left: 15% !important;
+
     }
 
     .marker-dot {
@@ -1728,6 +1740,57 @@ small {
     .search-btn-r {
         padding: 10px 20px !important;
         font-size: 12px !important;
+    }
+
+    .calculator-content-outer {
+        padding: 10px;
+    }
+
+    .btn-primary {
+        font-size: medium;
+    }
+
+    .thinking-person {
+        transform: translateY(131%);
+        left: 12%;
+    }
+
+    .floating-tag {
+        top: -300px !important;
+    }
+
+    .tag-1 {
+        transform: translateY(-10px) !important;
+    }
+
+    .tag-2 {
+        transform: translateY(-10px) !important;
+    }
+
+    .tag-3 {
+        transform: translateY(-10px) !important;
+    }
+
+    .tag-4 {
+        transform: translateY(-10px) !important;
+    }
+
+    .aboutus-title {
+        font-size: xx-large;
+    }
+
+    .input-body-e {
+        margin-bottom: 10px;
+    }
+
+    .bg-dark-blue.rounded-5.footer-section {
+        h2 span {
+            font-size: 2rem !important;
+        }
+    }
+
+    .privacy-policy .row {
+        row-gap: 70px;
     }
 }
 
@@ -2836,13 +2899,24 @@ html {
 }
 
 .contact-details small {
-    font-size: 0.8rem;
-    margin-bottom: 0.25rem;
+    color: #DCDCDC;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    /* 22.4px */
 }
 
 .contact-details span {
-    font-size: 0.95rem;
-    line-height: 1.4;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    /* 25.2px */
+
 }
 
 /* Contact Form Wrapper */
@@ -3361,6 +3435,12 @@ html {
 
     .btn.btn-primary.btn-lg.rounded-pill.px-5.mb-5 {
         padding: 14px 23px;
+    }
+
+    .footer-section div {
+        img {
+            transform: translateX(0) !important;
+        }
     }
 }
 
