@@ -1383,7 +1383,21 @@ small {
 
 .timeline-item:nth-child(3) {
     z-index: 3;
+    transform: translateY(-7px);
 }
+
+.timeline-item:nth-child(3).active {
+
+    transform: translateY(-7px);
+}
+
+/* .marker-dot.third {
+    transform: translateY(2px);
+}
+
+.marker-dot.third.opacity-25 {
+    transform: translateY(0);
+} */
 
 .opacity-0 {
     opacity: 0;
@@ -1950,6 +1964,8 @@ small {
     bottom: 31px;
     animation: float 3s ease-in-out infinite;
 }
+
+
 
 .arrow-3d-css::after {
     content: '';
