@@ -3400,6 +3400,7 @@ html {
 
     .main-container {
         padding: 30px;
+        margin: 0 !important;
     }
 
     .proses-detail-card {
