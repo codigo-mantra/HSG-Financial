@@ -3071,7 +3071,7 @@ html {
 
 @media (max-width: 768px) {
     .contact-title {
-        font-size: 2rem;
+        font-size: 2rem !important;
     }
 
     .highlight-lime {
