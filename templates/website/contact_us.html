@@ -85,12 +85,6 @@
                     <form method="post" class="contact-form needs-validation" id="contactForm">
                         {% csrf_token %}
 
-                        <!-- 🔔 Success / Error messages -->
-                        {% if messages %}
-                        {% for message in messages %}
-                        <div class="alert alert-success">{{ message }}</div>
-                        {% endfor %}
-                        {% endif %}
 
                         <div class="row g-3">
                             <!-- First Name -->
