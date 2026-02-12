@@ -6,7 +6,9 @@ from .forms import ContactUsForm
 from django.views.generic import ListView, DetailView
 from taggit.models import Tag
 from .models import Blog, Category
-
+from django.core.mail import send_mail
+from django.conf import settings
+from django.template.loader import render_to_string
 
 class ContactUsView(View):
     template_name = "website/contact_us.html"
@@ -19,12 +21,35 @@ class ContactUsView(View):
         form = ContactUsForm(request.POST)
 
         if form.is_valid():
+            context = {
+                "first_name": form.cleaned_data.get("first_name"),
+                "last_name": form.cleaned_data.get("last_name"),
+                "phone_number":form.cleaned_data.get("phone_number"),
+                "email_address": form.cleaned_data.get("email_address"),
+                "message": form.cleaned_data.get("message")
+            }
             form.save()
             messages.success(
-                request, "Your query has been submitted successfully."
-            )
-            form = ContactUsForm()
+                    request, "Your query has been submitted successfully."
+                )
 
+            html_content = render_to_string(
+                "website/emailtemplate.html",
+                context
+            )
+            try:
+                send_mail(
+                    subject="New Contact Form Submission - HSG Financial",
+                    from_email=settings.DEFAULT_FROM_EMAIL,
+                    message="You have received a new contact form submission.",
+                    recipient_list=[settings.EMAIL_HOST_USER],
+                    html_message=html_content,  
+                    fail_silently=False,
+                )
+
+            except Exception as e:
+                print("error sending the mail ", str(e))
+                
         return render(request, self.template_name, {"form": form})
 
 
