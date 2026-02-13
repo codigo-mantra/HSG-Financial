@@ -1329,6 +1329,8 @@ span.amount-display {
     .navbar-nav.pc {
         position: relative !important;
         gap: 10px;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
     }
 
     .accordion-item.mobile-view {
@@ -1409,6 +1411,7 @@ span.amount-display {
     overflow-y: auto;
     z-index: 99;
     top: 0;
+    left: 0;
 }
 
 .close-btn {
@@ -2261,8 +2264,21 @@ span.amount-display {
         font-size: 14px !important;
     }
 
+    .navbar-brand.new {
+        margin-left: 10px !important;
+    }
+
+    .navbar-toggler {
+        margin-right: 10px !important;
+    }
+
     .faq-question {
         font-size: 16px !important;
+    }
+
+    .container.wer {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
 
     .faq-answer p {
