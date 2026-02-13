@@ -288,6 +288,7 @@ document.addEventListener('click', () => {
 
 
 const ctx = document.getElementById('stackedChart');
+const isDesktop = window.innerWidth >= 768;
 
 new Chart(ctx, {
     type: 'bar',
@@ -313,7 +314,8 @@ new Chart(ctx, {
     },
     options: {
         responsive: true,
-        maintainAspectRatio: false,
+
+        maintainAspectRatio: !isDesktop,
         plugins: {
             legend: {
                 display: false
@@ -325,7 +327,7 @@ new Chart(ctx, {
                 title: {
                     display: true,
                     text: 'Years',
-                    font: { size: 14 }
+                    font: { size: 12 }
                 },
                 grid: {
                     display: false

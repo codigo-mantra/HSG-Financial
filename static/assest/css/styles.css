@@ -1793,6 +1793,37 @@ small {
     .privacy-policy .row {
         row-gap: 70px;
     }
+
+    .timeline-item {
+        position: relative;
+        top: 0;
+    }
+
+    .select-dropdown {
+        width: 100% !important;
+    }
+
+    .catch-up-text {
+        font-size: 26px !important;
+    }
+
+    .catch-up-section {
+        min-height: auto !important;
+    }
+
+    .more-tool-title {
+        font-size: 26px !important;
+    }
+
+    .select-dropdown.se {
+        width: 93vw !important;
+    }
+
+    .row.mobile-view {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
 }
 
 
@@ -2821,6 +2852,7 @@ html {
 .contact-title {
     font-size: 3.5rem;
     letter-spacing: -1px;
+    margin-bottom: 9px;
 }
 
 .highlight-lime {
