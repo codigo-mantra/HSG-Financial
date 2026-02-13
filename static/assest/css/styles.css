@@ -2289,6 +2289,11 @@ span.amount-display {
         margin-bottom: 70px !important;
     }
 
+    .privacy-policy.r {
+        padding-top: 70px !important;
+        padding-bottom: 70px !important;
+    }
+
     .new-text-of {
         font-size: 14px;
     }
