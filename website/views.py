@@ -9,6 +9,7 @@ from .models import Blog, Category
 from django.core.mail import send_mail
 from django.conf import settings
 from django.template.loader import render_to_string
+from django.shortcuts import redirect   
 
 class ContactUsView(View):
     template_name = "website/contact_us.html"
@@ -49,6 +50,8 @@ class ContactUsView(View):
 
             except Exception as e:
                 print("error sending the mail ", str(e))
+            finally:
+                return redirect(request.path)    
                 
         return render(request, self.template_name, {"form": form})
 
