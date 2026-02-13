@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
     <link href="{% static '/assest/css/styles.css' %}" rel="stylesheet">
+    <link rel="icon" type="image/png" href="{% static 'assest/images/favicon.png' %}">
 
 
 </head>
@@ -94,12 +95,13 @@
                             </defs>
                         </svg>
                     </div>
-                    <p class="text-muted pera-font mb-1 mt-1">We're not just about numbers — we're about people. Our
+                    <p class="text-muted pera-font  mt-0" style="margin-bottom: 29px;">We're not just about numbers —
+                        we're about people. Our
                         values
                         shape
                         how
                         we work, how we advise, and how we support you throughout your financial journey.</p>
-                    <div class="d-flex align-items-center mt-2">
+                    <div class="d-flex align-items-center " style="margin-top: 30px;">
                         <div class="text-warning me-2">
                             <i class="bi bi-star-fill text-primary"></i>
                             <i class="bi bi-star-fill text-primary"></i>
@@ -107,8 +109,8 @@
                             <i class="bi bi-star-fill text-primary"></i>
                             <i class="bi bi-star-fill text-primary"></i>
                         </div>
-                        <span class="fw-bold">Rated 5/5</span>
-                        <span class="text-muted ms-2">from over 50 reviews.</span>
+                        <span class="fw-bold rating-font">Rated 5/5</span>
+                        <span class="text-muted ms-2 review-font">from over 50 reviews.</span>
                     </div>
                     <a href="{% url 'loan_calculator' %}"
                         class="text-decoration-none blue-linkk mt-3 d-inline-block">Explore More Calculators
@@ -121,9 +123,10 @@
                         <div class="card calculator-card border-0 shadow-lg rounded-4 p-4">
                             <div class="card-body">
                                 <h4 class="fw-bold mb-1 loan-calculator ">Loan Calculator</h4>
-                                <p class="text-muted cv small mb-4">Estimate your repayments</p>
+                                <p class="text-muted cv small " style="margin-bottom: 30px;">Estimate your repayments
+                                </p>
 
-                                <div class="btn-group gap-3 w-100 mb-4" role="group">
+                                <div class="btn-group  w-100 " role="group" style="gap: 26px; margin-bottom: 20px;">
                                     <button type="button" class="btn btn-outline-secondary active" data-type="home">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="21" height="23"
                                             viewBox="0 0 21 23" fill="none">
@@ -152,40 +155,40 @@
 
                                 <div class="mb-4 d-flex flex-column gap-2">
                                     <div class="d-flex justify-content-between mb-0">
-                                        <label class="text-muted range small">Loan Amount</label>
-                                        <span class="fw-bold" id="amountDisplay">$500,000</span>
+                                        <label class="text-muted range small amount-display ">Loan Amount</label>
+                                        <span class="fw-bold amount-display" id="amountDisplay">$500,000</span>
                                     </div>
                                     <input type="range" class="form-range" id="loanAmount" min="100000" max="2000000"
                                         step="10000" value="500000">
                                     <div class="d-flex justify-content-between small text-muted">
-                                        <span>$100k</span>
-                                        <span>$2m</span>
+                                        <span class="amount-display-total">$100k</span>
+                                        <span class="amount-display-total">$2m</span>
                                     </div>
                                 </div>
 
                                 <div class="mb-4 d-flex flex-column gap-2">
                                     <div class="d-flex justify-content-between mb-0">
-                                        <label class="text-muted range small">Interest Rate</label>
-                                        <span class="fw-bold" id="rateDisplay">5.5%</span>
+                                        <label class="text-muted range small amount-display">Interest Rate</label>
+                                        <span class="fw-bold amount-display" id="rateDisplay">5.5%</span>
                                     </div>
                                     <input type="range" class="form-range" id="interestRate" min="2" max="10" step="0.1"
                                         value="5.5">
                                     <div class="d-flex justify-content-between small text-muted">
-                                        <span>2%</span>
-                                        <span>10%</span>
+                                        <span class="amount-display-total">2%</span>
+                                        <span class="amount-display-total">10%</span>
                                     </div>
                                 </div>
 
                                 <div class="mb-4 d-flex flex-column gap-2">
                                     <div class="d-flex justify-content-between mb-0">
-                                        <label class="text-muted range small">Loan Term</label>
-                                        <span class="fw-bold" id="termDisplay">30 years</span>
+                                        <label class="text-muted range small amount-display">Loan Term</label>
+                                        <span class="fw-bold amount-display" id="termDisplay">30 years</span>
                                     </div>
                                     <input type="range" class="form-range" id="loanTerm" min="5" max="30" step="1"
                                         value="30">
                                     <div class="d-flex justify-content-between small text-muted">
-                                        <span>5yr</span>
-                                        <span>30yr</span>
+                                        <span class="amount-display-total">5yr</span>
+                                        <span class="amount-display-total">30yr</span>
                                     </div>
                                 </div>
 
@@ -330,7 +333,7 @@
 
         <section class="services-section ">
             <div class="container">
-                <div class="text-center mb-5">
+                <div class="text-center " style="margin-bottom: 61px;">
                     <span class="badge bg-primary rotate mb-3">Loan Types We Offer</span>
                     <h2 class="display-5 check-payment fw-bold">Explore Tailored Loan Solutions for<br>Home, Car,
                         Business,

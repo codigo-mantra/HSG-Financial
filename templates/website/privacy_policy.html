@@ -23,6 +23,15 @@
         .footer-section {
             padding-top: 10px;
         }
+
+        /* Fix scroll position for anchor links with sticky navbar */
+        [id] {
+            scroll-margin-top: 120px;
+        }
+
+        html {
+            scroll-padding-top: 120px;
+        }
     </style>
 
 
@@ -367,7 +376,7 @@
                     trigger: toc,
                     start: "top 11%",
                     endTrigger: ".privacy-policy",
-                    end: "bottom 120%",
+                    end: "bottom 150%",
                     pin: true,
                     pinSpacing: false,
                 });
@@ -377,19 +386,94 @@
         });
 
 
+        // document.addEventListener('DOMContentLoaded', () => {
+        //     const links = document.querySelectorAll('a[href^="#"]');
+
+        //     links.forEach(link => {
+        //         link.addEventListener('click', () => {
+        //             // remove active from all
+        //             links.forEach(l => l.classList.remove('active'));
+
+        //             // add active to clicked
+        //             link.classList.add('active');
+        //         });
+        //     });
+        // });
+
+
+
         document.addEventListener('DOMContentLoaded', () => {
-            const links = document.querySelectorAll('a[href^="#"]');
+            const links = document.querySelectorAll('.table-of-content-line a[href^="#"]');
+            const sections = document.querySelectorAll('[id]');
 
+            // Function to get scroll offset based on screen size and section
+            function getScrollOffset(section) {
+                // Check if section is inside .how-we-work
+                const isHowWeWork = section.closest('.how-we-work');
+                
+                // For mobile devices (width <= 768px), exclude .how-we-work sections
+                if (window.innerWidth <= 768 && isHowWeWork) {
+                    return 70; // Original offset for .how-we-work on mobile
+                }
+                
+                return 120; // Standard offset for all other sections
+            }
+
+            // Function to update active link based on scroll position
+            function updateActiveLink() {
+                let currentActive = null;
+
+                sections.forEach(section => {
+                    const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+                    const sectionBottom = sectionTop + section.offsetHeight;
+                    const offset = getScrollOffset(section);
+                    const targetPosition = window.scrollY + offset;
+
+                    // Check if offset mark is within this section
+                    if (targetPosition >= sectionTop && targetPosition < sectionBottom) {
+                        currentActive = section.getAttribute('id');
+                    }
+                });
+
+                if (currentActive) {
+                    // Remove active from all links
+                    links.forEach(link => link.classList.remove('active'));
+
+                    // Add active to corresponding link
+                    const activeLink = document.querySelector(`.table-of-content-line a[href="#${currentActive}"]`);
+                    if (activeLink) {
+                        activeLink.classList.add('active');
+                    }
+                }
+            }
+
+            // Update on scroll
+            window.addEventListener('scroll', updateActiveLink);
+
+            // Update on page load
+            updateActiveLink();
+
+            // Update on window resize
+            window.addEventListener('resize', updateActiveLink);
+
+            // Smooth scroll on click
             links.forEach(link => {
-                link.addEventListener('click', () => {
-                    // remove active from all
-                    links.forEach(l => l.classList.remove('active'));
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
 
-                    // add active to clicked
-                    link.classList.add('active');
+                    if (targetSection) {
+                        const offset = getScrollOffset(targetSection);
+                        const offsetPosition = targetSection.getBoundingClientRect().top + window.scrollY - offset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
                 });
             });
         });
-
     </script>
 </body>

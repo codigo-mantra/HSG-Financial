@@ -6,15 +6,16 @@
         <a class="navbar-brand d-flex align-items-center" href="{% url 'home_page' %}">
 
             <div>
-                <img src="{% static '/assest/images/image_2.svg' %}" alt="">
+                <img class="logo-container-mobile" src="{% static '/assest/images/image_2.svg' %}" alt="">
             </div>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
+
         </button>
         <div class="collapse navbar-collapse new-nav" id="navbarNav">
-            <ul class="navbar-nav ms-auto align-items-center">
-                <li class="nav-item d-flex align-items-center  mega-menu">
+            <ul class="navbar-nav ms-auto align-items-center pc">
+                <li class="nav-item d-flex align-items-center  mega-menu pc">
                     <a class="nav-link " href="{% url 'service_detail_page' %}" role="button">
                         Loans
                     </a>
@@ -95,13 +96,197 @@
                         </div>
                     </div>
                 </li>
+                <li class="nav-item d-flex align-items-center  mega-menu mobile">
+                    <a class="nav-link pc" href="{% url 'loan_calculator' %}" role="button">Loans</a>
+
+                    <div class="dropdown-toggle-extend mobile ms-2" id="openMenuloadns">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6" fill="none">
+                            <path d="M0.75 0.750031L5.75 4.75003L10.75 0.750031" stroke="#1A1A1A" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+
+                    <div class="position-absolute w-100 h-100 bg-white custom-dropdown" id="mobileDivloans">
+                        <button class="close-btn custom start-0 " id="closeMenuloans">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="6" height="12" viewBox="0 0 6 12"
+                                fill="none">
+                                <path d="M4.75 10.75L0.75 5.75L4.75 0.749999" stroke="#333333" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            Loans</button>
+                        <div class="bg-white pb-3">
+
+                            <div class="accordion mt-3 pt-4 w-100 bg-white" id="mobileAccordion">
+
+                                <div class="accordion-item mobile-view gap-1">
+                                    <h2 class="accordion-header">
+
+                                        Home & Property Loans
+
+                                    </h2>
+
+                                    <ul class="d-flex flex-column gap-1 calculator-types">
+                                        <li><a href="#"><span class="loan-icon icon-blue"></span>First Home
+                                                Buyer
+                                                Loans</a>
+                                        </li>
+                                        <li><a href="#"><span class="loan-icon icon-navy"></span>Home Loans
+                                                (Owner-Occupied)</a>
+                                        </li>
+                                        <li><a href="#"><span class="loan-icon icon-teal"></span>Refinance &
+                                                Debt
+                                                Consolidation</a>
+                                        </li>
+                                        <li><a href="#"><span class="loan-icon icon-teal"></span>Investment
+                                                Property
+                                                Loans</a>
+                                        </li>
+                                        <li><a href="#"><span class="loan-icon icon-teal"></span>Construction
+                                                Loans</a>
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+                                <div class="accordion-item mobile-view gap-1">
+                                    <h2 class="accordion-header">
+
+                                        Vehicle Loans
+                                    </h2>
+
+                                    <ul class="d-flex flex-column gap-1 calculator-types">
+                                        <li><a href="#"><span class="loan-icon icon-blue"></span>Car Loans</a>
+                                        </li>
+                                        <li><a href="#"><span class="loan-icon icon-navy"></span>Truck / Commercial
+                                                Vehicle Loans</a>
+                                        </li>
+
+
+                                    </ul>
+
+                                </div>
+                                <div class="accordion-item mobile-view gap-1">
+                                    <h2 class="accordion-header">
+
+                                        Business & Commercial Loans
+
+                                    </h2>
+
+                                    <ul class="d-flex flex-column gap-1 calculator-types">
+                                        <li><a href="#"><span class="loan-icon icon-blue"></span>Commercial Loans</a>
+                                        </li>
+                                        <li><a href="#"><span class="loan-icon icon-navy"></span>Business Property
+                                                Loans</a>
+                                        </li>
+
+
+                                    </ul>
+
+                                </div>
+
+                                <div class="accordion-item mobile-view gap-1">
+                                    <h2 class="accordion-header">
+
+                                        Personal Finance
+
+                                    </h2>
+
+                                    <ul class="d-flex flex-column gap-1 calculator-types">
+                                        <li><a href="#"><span class="loan-icon icon-blue"></span>Personal Loans</a>
+                                        </li>
+
+
+                                    </ul>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'about_us' %}">About Us</a>
                 </li>
-                <li class="nav-item d-flex align-items-center  mega-menu">
-                    <a class="nav-link " href="{% url 'loan_calculator' %}" role="button">Calculators</a>
+                <li class="nav-item d-flex align-items-center  mega-menu pc">
+                    <a class="nav-link pc" href="{% url 'loan_calculator' %}" role="button">Calculators</a>
 
-                    <div class="dropdown-toggle"></div>
+                    <div class="dropdown-toggle pc"></div>
+                    <div class=""></div>
+
+                    <div class="collapse" id="mobileAccordionWrapper">
+
+                        <div class="accordion mt-3" id="mobileAccordion">
+
+                            <!-- Item 1 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne">
+                                        Item 1
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse"
+                                    data-bs-parent="#mobileAccordion">
+                                    <div class="accordion-body">
+                                        Content for Item 1
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Item 2 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo">
+                                        Item 2
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse"
+                                    data-bs-parent="#mobileAccordion">
+                                    <div class="accordion-body">
+                                        Content for Item 2
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Item 3 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree">
+                                        Item 3
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    data-bs-parent="#mobileAccordion">
+                                    <div class="accordion-body">
+                                        Content for Item 3
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Item 4 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour">
+                                        Item 4
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse"
+                                    data-bs-parent="#mobileAccordion">
+                                    <div class="accordion-body">
+                                        Content for Item 4
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
                     <div class="dropdown-menu">
                         <div class="mega-menu-content">
                             <div class="mega-menu-categories">
@@ -171,6 +356,111 @@
                         </div>
                     </div>
                 </li>
+                <li class="nav-item d-flex align-items-center  mega-menu mobile">
+                    <a class="nav-link pc" href="{% url 'loan_calculator' %}" role="button">Calculators</a>
+
+                    <div class="dropdown-toggle-extend mobile ms-2" id="openMenu">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6" fill="none">
+                            <path d="M0.75 0.750031L5.75 4.75003L10.75 0.750031" stroke="#1A1A1A" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+
+                    <div class="position-absolute w-100 h-100 bg-white custom-dropdown" id="mobileDiv">
+                        <button class="close-btn custom start-0 " id="closeMenu">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="6" height="12" viewBox="0 0 6 12"
+                                fill="none">
+                                <path d="M4.75 10.75L0.75 5.75L4.75 0.749999" stroke="#333333" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            Calculators</button>
+                        <div class="bg-white pb-3">
+
+                            <div class="accordion mt-3 pt-4 w-100 bg-white" id="mobileAccordion">
+
+                                <div class="accordion-item mobile-view gap-1">
+                                    <h2 class="accordion-header">
+
+                                        Loan category 1
+
+                                    </h2>
+
+                                    <ul class="d-flex flex-column gap-1 calculator-types">
+                                        <li><a href="#"><span class="loan-icon icon-blue"></span>Calculator Type 1</a>
+                                        </li>
+                                        <li><a href="#"><span class="loan-icon icon-navy"></span>Calculator Type 2</a>
+                                        </li>
+                                        <li><a href="#"><span class="loan-icon icon-teal"></span>Calculator Type 3</a>
+
+                                        </li>
+
+
+                                    </ul>
+
+                                </div>
+
+                                <div class="accordion-item mobile-view gap-1">
+                                    <h2 class="accordion-header">
+
+                                        Loan category 2
+                                    </h2>
+
+                                    <ul class="d-flex flex-column gap-1 calculator-types">
+                                        <li><a href="#"><span class="loan-icon icon-blue"></span>Calculator Type 4</a>
+                                        </li>
+                                        <li><a href="#"><span class="loan-icon icon-navy"></span>Calculator Type 5</a>
+                                        </li>
+                                        <li><a href="#"><span class="loan-icon icon-navy"></span>Calculator Type 6</a>
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+                                <div class="accordion-item mobile-view gap-1">
+                                    <h2 class="accordion-header">
+
+                                        Loan category 3
+
+                                    </h2>
+
+                                    <ul class="d-flex flex-column gap-1 calculator-types">
+                                        <li><a href="#"><span class="loan-icon icon-blue"></span>Calculator Type 7</a>
+                                        </li>
+                                        <li><a href="#"><span class="loan-icon icon-navy"></span>Calculator Type 8</a>
+                                        </li>
+                                        <li><a href="#"><span class="loan-icon icon-navy"></span>Calculator Type 9</a>
+                                        </li>
+
+
+                                    </ul>
+
+                                </div>
+
+                                <div class="accordion-item mobile-view gap-1">
+                                    <h2 class="accordion-header">
+
+                                        Loan category 4
+
+                                    </h2>
+
+                                    <ul class="d-flex flex-column gap-1 calculator-types">
+                                        <li><a href="#"><span class="loan-icon icon-blue"></span>Calculator Type 10</a>
+                                        </li>
+                                        <li><a href="#"><span class="loan-icon icon-blue"></span>Calculator Type 11</a>
+                                        </li>
+                                        <li><a href="#"><span class="loan-icon icon-blue"></span>Calculator Type 12</a>
+                                        </li>
+
+
+                                    </ul>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="{% url 'blogs_page' %}" role="button">Insights &
                         Resources</a>
@@ -203,5 +493,41 @@
             }
         });
     });
+
+
+
+    const openBtn = document.getElementById("openMenu");
+    const closeBtn = document.getElementById("closeMenu");
+    const mobileDiv = document.getElementById("mobileDiv");
+
+    if (openBtn && mobileDiv) {
+        openBtn.addEventListener("click", function () {
+            mobileDiv.style.display = "block";
+        });
+    }
+
+    if (closeBtn && mobileDiv) {
+        closeBtn.addEventListener("click", function () {
+            console.log("Closing menu");
+            mobileDiv.style.display = "none";
+        });
+    }
+
+    const openBtn2 = document.getElementById("openMenuloadns");
+    const closeBtn2 = document.getElementById("closeMenuloans");
+    const mobileDiv2 = document.getElementById("mobileDivloans");
+
+    if (openBtn2 && mobileDiv2) {
+        openBtn2.addEventListener("click", function () {
+            mobileDiv2.style.display = "block";
+        });
+    }
+
+    if (closeBtn2 && mobileDiv2) {
+        closeBtn2.addEventListener("click", function () {
+            console.log("Closing menu");
+            mobileDiv2.style.display = "none";
+        });
+    }
 
 </script>
