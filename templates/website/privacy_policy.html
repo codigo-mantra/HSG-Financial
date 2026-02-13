@@ -16,6 +16,7 @@
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
     <link href="{% static '/assest/css/styles.css' %}" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="icon" type="image/png" href="{% static 'assest/images/favicon.png' %}">
 
 
 
@@ -53,7 +54,7 @@
             </div>
         </div>
     </div>
-    <section class="privacy-policy position-relative overflow-hidden "
+    <section class="privacy-policy r position-relative overflow-hidden "
         style="padding-top: 100px; padding-bottom: 130px; ">
         <div class="container">
             <div class="row">
@@ -406,19 +407,6 @@
             const links = document.querySelectorAll('.table-of-content-line a[href^="#"]');
             const sections = document.querySelectorAll('[id]');
 
-            // Function to get scroll offset based on screen size and section
-            function getScrollOffset(section) {
-                // Check if section is inside .how-we-work
-                const isHowWeWork = section.closest('.how-we-work');
-                
-                // For mobile devices (width <= 768px), exclude .how-we-work sections
-                if (window.innerWidth <= 768 && isHowWeWork) {
-                    return 70; // Original offset for .how-we-work on mobile
-                }
-                
-                return 120; // Standard offset for all other sections
-            }
-
             // Function to update active link based on scroll position
             function updateActiveLink() {
                 let currentActive = null;
@@ -426,10 +414,9 @@
                 sections.forEach(section => {
                     const sectionTop = section.getBoundingClientRect().top + window.scrollY;
                     const sectionBottom = sectionTop + section.offsetHeight;
-                    const offset = getScrollOffset(section);
-                    const targetPosition = window.scrollY + offset;
+                    const targetPosition = window.scrollY + 130; // 120px offset for sticky navbar
 
-                    // Check if offset mark is within this section
+                    // Check if 70px mark is within this section
                     if (targetPosition >= sectionTop && targetPosition < sectionBottom) {
                         currentActive = section.getAttribute('id');
                     }
@@ -453,9 +440,6 @@
             // Update on page load
             updateActiveLink();
 
-            // Update on window resize
-            window.addEventListener('resize', updateActiveLink);
-
             // Smooth scroll on click
             links.forEach(link => {
                 link.addEventListener('click', (e) => {
@@ -464,8 +448,7 @@
                     const targetSection = document.querySelector(targetId);
 
                     if (targetSection) {
-                        const offset = getScrollOffset(targetSection);
-                        const offsetPosition = targetSection.getBoundingClientRect().top + window.scrollY - offset;
+                        const offsetPosition = targetSection.getBoundingClientRect().top + window.scrollY - 120;
 
                         window.scrollTo({
                             top: offsetPosition,
