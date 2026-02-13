@@ -2033,9 +2033,7 @@ span.amount-display {
         line-height: 160%;
     }
 
-    .check-payment-p {
-        margin-bottom: 0 !important;
-    }
+
 
     .magic-section {
         padding-bottom: 0 !important;
@@ -2167,6 +2165,11 @@ span.amount-display {
 
     .more-tool-title {
         font-size: 16px !important;
+        margin-top: 70px !important;
+    }
+
+    .bg-lines-design {
+        padding-bottom: 70px !important;
     }
 
     .more-tool-para {
@@ -2282,11 +2285,17 @@ span.amount-display {
         font-size: 16px;
     }
 
+    .footer-contextc {
+        margin-bottom: 70px !important;
+    }
+
     .new-text-of {
         font-size: 14px;
     }
 
     .timeline-item:nth-child(3) {
+        margin-bottom: 0 !important;
+
         .timeline-content {
             margin-bottom: 0 !important;
         }
