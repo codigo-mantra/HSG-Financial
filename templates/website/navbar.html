@@ -530,4 +530,24 @@
         });
     }
 
+
+
+
+    const toggler = document.querySelector(".navbar-toggler");
+    const mobileDiv1 = document.getElementById("mobileDiv");
+    const mobileDiv3 = document.getElementById("mobileDivloans");
+
+    if (toggler) {
+        toggler.addEventListener("click", function () {
+            if (mobileDiv1) {
+                mobileDiv1.style.display = "none";
+            }
+
+            if (mobileDiv3) {
+                mobileDiv3.style.display = "none";
+            }
+        });
+    }
+
+
 </script>

@@ -290,7 +290,7 @@ body {
 }
 
 p {
-    opacity: 0.7 !important;
+    opacity: 0.9 !important;
 }
 
 .bg-warning {
@@ -1173,7 +1173,7 @@ span.amount-display {
     }
 
     .display-5 {
-        font-size: 16px;
+        font-size: 36px;
 
         br {
             display: none !important;
@@ -1291,7 +1291,7 @@ span.amount-display {
     }
 
     .check-payment {
-        font-size: 16px !important;
+        font-size: 36px !important;
 
         br {
             display: none;
@@ -1309,7 +1309,7 @@ span.amount-display {
     .guide-card {
         & .card-body {
             h5 {
-                font-size: 16px;
+                font-size: 14px;
             }
 
             p {
@@ -1317,7 +1317,7 @@ span.amount-display {
             }
 
             a {
-                font-size: 14px;
+                font-size: 12px;
             }
         }
     }
@@ -1647,7 +1647,7 @@ span.amount-display {
     max-width: 357px;
 
     span {
-        opacity: 0.7;
+        opacity: 0.9;
     }
 
     b {
@@ -1893,6 +1893,10 @@ span.amount-display {
 
 .catch-up-section {
     background: url(../images/catchup.png) center / cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
 }
 
 .listening-white-list {
@@ -1924,6 +1928,8 @@ span.amount-display {
 .provide-section-r {
     border-radius: 30px;
     background: #131E2B;
+    padding: 76px 83px 75px 83px;
+
 
     h5 {
         color: #DCDCDC;
@@ -1997,6 +2003,10 @@ span.amount-display {
         height: 40px;
     }
 
+    .provide-section-r {
+        padding: 50px 60px;
+    }
+
     .marker-inner {
         width: 15px;
         height: 15px;
@@ -2062,7 +2072,7 @@ span.amount-display {
     }
 
     .blog-btn-red {
-        padding: 10px 10px !important;
+        /* padding: 10px 10px !important; */
         font-size: 12px !important;
     }
 
@@ -2079,7 +2089,7 @@ span.amount-display {
     }
 
     .search-btn-r {
-        padding: 10px 20px !important;
+        /* padding: 1 !important; */
         font-size: 12px !important;
     }
 
@@ -2128,8 +2138,19 @@ span.amount-display {
         h2 {
 
             span {
-                font-size: 16px !important;
+                font-size: 36px !important;
             }
+        }
+
+        p {
+            color: #FFF;
+            text-align: center;
+            font-family: Poppins;
+            font-size: 14px !important;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%;
+            /* 25.6px */
         }
     }
 
@@ -2147,8 +2168,8 @@ span.amount-display {
     }
 
     .timeline-item {
-        position: relative;
-        top: 0;
+        /* position: relative;
+        top: 0; */
     }
 
     .select-dropdown {
@@ -2164,7 +2185,7 @@ span.amount-display {
     }
 
     .more-tool-title {
-        font-size: 16px !important;
+        font-size: 36px !important;
         margin-top: 70px !important;
     }
 
@@ -2196,18 +2217,18 @@ span.amount-display {
         }
 
         .highlight-number {
-            font-size: 16px !important;
+            font-size: 36px !important;
         }
 
         .highlight-lenders {
-            font-size: 16px !important;
+            font-size: 36px !important;
         }
     }
 
     .testimonial-card {
         & .card-body {
             h5 {
-                font-size: 16px;
+                font-size: 14px;
             }
 
             p {
@@ -2215,7 +2236,7 @@ span.amount-display {
             }
 
             .fw-bold.small {
-                font-size: 16px;
+                font-size: 14px;
             }
         }
     }
@@ -2223,17 +2244,17 @@ span.amount-display {
     .proses-detail-card {
         & div {
             h5 {
-                font-size: 16px !important;
+                font-size: 14px !important;
             }
 
             p {
-                font-size: 14px !important;
+                font-size: 12px !important;
             }
         }
     }
 
     .faq-titaal {
-        font-size: 16px !important;
+        font-size: 36px !important;
     }
 
     .raq-pera {
@@ -2249,7 +2270,7 @@ span.amount-display {
     }
 
     .provide-section-r h4 {
-        font-size: 16px !important;
+        font-size: 26px !important;
     }
 
     .provide-section-r {
@@ -2300,10 +2321,30 @@ span.amount-display {
 
     .timeline-item:nth-child(3) {
         margin-bottom: 0 !important;
+        transform: translateY(-23px);
 
         .timeline-content {
             margin-bottom: 0 !important;
         }
+    }
+
+    .marker-dot.third {
+        transform: translateY(3px);
+
+    }
+
+    .timeline-item:nth-child(2) {
+
+        .timeline-marker {
+            height: 210px;
+        }
+    }
+
+
+
+
+    .custom-dropdown {
+        height: 100vh !important;
     }
 
     .article-content-section {
@@ -2391,6 +2432,11 @@ span.amount-display {
         padding-top: 10px !important;
         padding-bottom: 70px;
     }
+
+    .hero-section-lines {
+        height: 1300px;
+    }
+
 }
 
 
@@ -3784,6 +3830,17 @@ html {
         font-weight: 800;
         line-height: 140%;
     }
+
+    p {
+        color: #FFF;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+        /* 25.6px */
+    }
 }
 
 .footer-links {
@@ -4049,7 +4106,7 @@ html {
 
 @media (max-width: 768px) {
     .text-section h1 {
-        font-size: 36px;
+        font-size: 36px !important;
     }
 
     .logo-card {
@@ -4127,7 +4184,7 @@ html {
     }
 
     .Calculator-cardrs div h5 {
-        font-size: 16px !important;
+        font-size: 14px !important;
     }
 
     .Calculator-cardrs div p {
